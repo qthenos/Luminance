@@ -1,0 +1,33 @@
+:root {
+  --size-icon-normal: 2em;
+  --size-icon-large: 4em;
+
+  --size-spacing-small: 0.25rem;
+  --size-spacing-medium: 0.5rem;
+  --size-spacing-large: 1rem;
+  --size-spacing-xlarge: 2rem;
+
+  --size-type-body: 1rem;
+  --size-type-medium: 1.25rem;
+  --size-type-large: 1.5rem;
+  --size-type-xlarge: 2rem;
+  --size-type-xxlarge: 2.5rem;
+
+  --color-dark-primary: rgb(15, 15, 15);
+  --color-dark-highlight: rgb(220 0 0);
+  --color-dark-text: rgb(245, 245, 245);
+  --color-dark-accent: rgb(55 55 55);
+
+  --font-family-display: "Racing Sans One", sans-serif;
+  --font-family-body: "IBM Plex Mono", monospace;
+
+  --font-line-height-body: 1.5;
+  --font-line-height-compact: 1.25;
+  --font-line-height-display: 1.125;
+  --font-line-height-logotype: 1;
+
+  --font-weight-normal: 400;
+  --font-weight-light: 200;
+  --font-weight-bold: 700;
+
+}
