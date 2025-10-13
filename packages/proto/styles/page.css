@@ -6,41 +6,55 @@ body {
 }
 
 .grid {
-    --page-grids: 8;
+    --page-grids: 4;
+
     --page-grid-gap: var(--size-spacing-medium);
 
     display: grid;
     grid-template-columns: [start]
     repeat(var(--page-grids), 1fr) [end];
     grid-auto-flow: dense;
-    padding: 0 calc(0.5 * var(--page-grid-gap));
+    padding: var(--page-grid-gap);
     gap: var(--page-grid-gap);
     align-items: baseline;
+}
 
-    > main {
-        display: grid;
-        grid-template-columns: subgrid;
-        grid-column: 3 / span 4; 
+.grid > main {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1; 
+}
 
-        ul, ol {
-            display: contents; /* let list items participate in the parent grid */
-        }
+.grid > main ul,
+.grid > main ol {
+    display: contents; /* let list items participate in the parent grid */
+}
 
-        li {
-            display: block;
-            grid-column: span 1; /* each list item occupies a single grid cell */
-            align-self: start;
-            box-sizing: border-box;
-            aspect-ratio: 1 / 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--color-dark-accent);
-            border-radius: 6px;
-            padding: var(--size-spacing-small);
-            background: rgba(255,255,255,0.02);
-        }
-    }
+.grid > main li a {
+    display: flex;
+    grid-column: span 1;
+    align-self: start;
+    box-sizing: border-box;
+    aspect-ratio: 1 / 1;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-dark-accent);
+    border-radius: 6px;
+    padding: var(--size-spacing-small);
+    background: rgba(255,255,255,0.02);
+}
+
+
+@media screen and (max-width: 40rem) {
+  .grid {
+    --page-grids: 2;
+  }
+}
+
+@media screen and (max-width: 20rem) {
+  .grid {
+    --page-grids: 1;
+  }
 }
 
 .page > header {
@@ -54,19 +68,19 @@ body {
 
     font-family: var(--font-family-display);
 
-    h1 {
-        font-size: var(--size-type-xxlarge);
-    }
-
-    h2 {
-        font-size: var(--size-type-small);
-    }
-
     border-bottom: 10px solid var(--color-dark-accent);
     border-radius: 0 0 10px 10px;
 }
 
-.page { a, a:visited {
+.page > header h1 {
+    font-size: var(--size-type-xxlarge);
+}
+
+.page > header h2 {
+    font-size: var(--size-type-small);
+}
+
+.page a, .page a:visited {
     color: var(--color-dark-text);
     text-decoration: none;
-}}
+}
