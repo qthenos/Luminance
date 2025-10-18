@@ -5,57 +5,6 @@ body {
     color: var(--color-dark-text);
 }
 
-.grid {
-    --page-grids: 4;
-
-    --page-grid-gap: var(--size-spacing-medium);
-
-    display: grid;
-    grid-template-columns: [start]
-    repeat(var(--page-grids), 1fr) [end];
-    grid-auto-flow: dense;
-    padding: var(--page-grid-gap);
-    gap: var(--page-grid-gap);
-    align-items: baseline;
-}
-
-.grid > main {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-column: 1 / -1; 
-}
-
-.grid > main ul,
-.grid > main ol {
-    display: contents; /* let list items participate in the parent grid */
-}
-
-.grid > main li a {
-    display: flex;
-    grid-column: span 1;
-    align-self: start;
-    box-sizing: border-box;
-    aspect-ratio: 1 / 1;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--color-dark-accent);
-    border-radius: 6px;
-    padding: var(--size-spacing-small);
-    background: rgba(255,255,255,0.02);
-}
-
-
-@media screen and (max-width: 40rem) {
-  .grid {
-    --page-grids: 2;
-  }
-}
-
-@media screen and (max-width: 20rem) {
-  .grid {
-    --page-grids: 1;
-  }
-}
 
 .page > header {
     display: flex;

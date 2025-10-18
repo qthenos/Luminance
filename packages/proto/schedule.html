@@ -2,37 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminance</title>
+    <link rel="icon" href="assets/images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Racing+Sans+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/page.css" />
+    <link rel="stylesheet" href="./styles/grid.css" />
   </head>
-  <h1>Schedule</h1>
-  <body>
-    <ol>
-     <li><a href="./australia.html">Australia</a></li>
-     <li>China</li>
-     <li>Japan</li>
-     <li>Bahrain</li>
-     <li>Saudi Arabia</li>
-     <li>USA - Miami</li>
-     <li>Italy - Imola</li>
-     <li>Monaco</li>
-     <li>Spain</li>
-     <li>Canada</li>
-     <li>Austria</li>
-     <li>United Kindom</li>
-     <li>Belgium</li>
-     <li>Hungary</li>
-     <li>Netherlands</li>
-     <li>Italy - Monza</li>
-     <li>Azerbaijan</li>
-     <li>Singapore</li>
-     <li>USA - Austin</li>
-     <li>Mexico</li>
-     <li>Brazil</li>
-     <li>USA - Las Vegas</li>
-     <li>Qatar</li>
-     <li>Abu Dhabi</li>
-    </ol>
-  </body>
-  <a href="./index.html">Home</a>  
+  <body class="page">
+    <header>
+      <h1>Schedule</h1>
+      <a href="./index.html">Home</a> 
+    </header>
+    <article class="grid">
+      <main>
+        <ol>
+          <li>
+            <a href="./australia.html">Australia</a>
+            <svg class="icon"><use href="./assets/icons/circuits.svg#melbourne-circuit" /></svg>
+          </li>
+          <li>
+            China
+            <svg class="icon"><use href="./assets/icons/circuits.svg#shanghai-circuit" /></svg>
+          </li>
+          <li>
+            Japan
+            <svg class="icon"><use href="./assets/icons/circuits.svg#suzuka-circuit" /></svg>
+          </li>
+          <li>
+            Bahrain
+            <svg class="icon"><use href="./assets/icons/circuits.svg#sakhir-circuit" /></svg>
+          </li>
+          <li>
+            Saudi Arabia
+            <svg class="icon"><use href="./assets/icons/circuits.svg#jeddah-circuit" /></svg>
+          </li>
+          <li>
+            USA - Miami
+          </li>
+          <li>
+            Italy - Imola
+            <svg class="icon"><use href="./assets/icons/circuits.svg#imola-circuit" /></svg>
+          </li>
+          <li>Monaco</li>
+          <li>Spain</li>
+          <li>
+            Canada
+            <svg class="icon"><use href="./assets/icons/circuits.svg#mosport-circuit" /></svg>
+          </li>
+          <li>Austria</li>
+          <li>United Kindom</li>
+          <li>Belgium</li>
+          <li>Hungary</li>
+          <li>
+            Netherlands
+            <svg class="icon"><use href="./assets/icons/circuits.svg#zandvort-circuit" /></svg>
+          </li>
+          <li>Italy - Monza</li>
+          <li>Azerbaijan</li>
+          <li>Singapore</li>
+          <li>USA - Austin</li>
+          <li>Mexico</li>
+          <li>Brazil</li>
+          <li>USA - Vegas</li>
+          <li>Qatar</li>
+          <li>
+            Abu Dhabi
+            <svg class="icon"><use href="./assets/icons/circuits.svg#yas-marina-circuit" /></svg>
+          </li>
+        </ol>
+      </main>
+    </article>
+  </body> 
 </html>

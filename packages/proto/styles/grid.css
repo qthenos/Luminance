@@ -1,0 +1,55 @@
+.grid {
+    --box-size: 150px;
+    --page-grid-gap: var(--size-spacing-medium);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--box-size), var(--box-size)));
+    justify-content: center;
+    padding: var(--page-grid-gap);
+    gap: var(--page-grid-gap);
+    /* align-items: baseline; */
+    align-items: start;
+}
+
+.grid > main {
+    display: contents;
+}
+
+.grid > main ul,
+.grid > main ol {
+    display: contents;
+}
+
+.grid > main li {
+    display: flex;
+    aspect-ratio: 1 / 1;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-dark-accent);
+    border-radius: 6px;
+    padding: var(--size-spacing-small);
+    background: rgba(255,255,255,0.02);
+}
+
+.grid > main li:has(svg) {
+    position: relative;
+    overflow: hidden;
+    align-items: end;
+}
+
+.grid > main li svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    /* fill: var(--color-dark-text); */
+    fill: red;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.grid > main li:has(svg) > :not(svg) {
+    position: relative;
+    z-index: 1;
+}
