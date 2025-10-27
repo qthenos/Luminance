@@ -50,7 +50,7 @@
     align-items: end;
 }
 
-.grid > main li :is(svg, img) {
+.grid > main li svg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -64,4 +64,20 @@
 .grid > main li:has(svg, img) > :not(svg, img) {
     position: relative;
     z-index: 1;
+}
+
+.grid > main li img {
+    top: 0px;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    display: block;
+    overflow: clip;
+    object-fit: cover;
+    object-position: top;
+    z-index: 0;
+}
+
+.grid > main li:has(img) > a {
+    padding: 1px;
 }
