@@ -1,8 +1,8 @@
 
 body {
     font-family: var(--font-family-body);
-    background-color: var(--color-dark-primary);
-    color: var(--color-dark-text);
+    background-color: var(--color-primary);
+    color: var(--color-text);
 }
 
 
@@ -12,12 +12,12 @@ body {
     justify-content: space-between;
     padding: var(--size-spacing-medium);
 
-    background-color: var(--color-dark-primary);
-    color: var(--color-dark-highlight);
+    background-color: var(--color-primary);
+    color: var(--color-highlight);
 
     font-family: var(--font-family-display);
 
-    border-bottom: 10px solid var(--color-dark-accent);
+    border-bottom: 10px solid var(--color-accent);
     border-radius: 0 0 10px 10px;
 }
 
@@ -30,6 +30,11 @@ body {
 }
 
 .page a, .page a:visited {
-    color: var(--color-dark-text);
+    color: var(--color-text);
     text-decoration: none;
+}
+
+.page label svg {
+    width: 50px;
+    fill: var(--color-highlight);
 }

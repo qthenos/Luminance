@@ -24,10 +24,10 @@
     aspect-ratio: 1 / 1;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--color-dark-accent);
+    border: 2px solid var(--color-accent);
     border-radius: 6px;
     padding: var(--size-spacing-small);
-    background: rgba(255,255,255,0.02);
+    background: var(--color-background);
     background-size: contain;
 }
 
@@ -36,9 +36,9 @@
     align-items: center;
     justify-content: center;
     padding: var(--size-spacing-small);
-    border: 2px solid var(--color-dark-accent);
+    border: 2px solid var(--color-accent);
     border-radius: 6px;
-    background: rgba(55,55,55,0.5);
+    background: var(--color-highlight-background);
     text-decoration: none;
     color: inherit;
     z-index: 2;
@@ -56,7 +56,7 @@
     height: 100%;
     display: block;
     object-fit: cover;
-    fill: red;
+    fill: var(--color-highlight);
     opacity: 0.5;
     z-index: 0;
 }

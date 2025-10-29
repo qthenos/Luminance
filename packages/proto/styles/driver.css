@@ -1,0 +1,67 @@
+
+
+.driver > h2 {
+    text-align: center;
+    font-family: var(--font-family-body);
+    font-size: var(--size-type-xxlarge);
+}
+
+.driver {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.driver > figure {
+    margin-right: auto;
+    width: 200px;
+    background: var(--color-darg-background);
+    border: 2px solid var(--color-accent);
+    border-radius: 6px;
+    padding: 10px;
+    color: var(--color-accent);
+}
+
+.driver > figure img {
+    max-width: 180px;
+}
+
+.driver > .number {
+    margin-left: auto;
+    max-height: 580px;
+    background: var(--color-darg-background);
+    border: 2px solid var(--color-accent);
+    border-radius: 6px;
+    padding: 10px;
+    color: var(--color-accent);
+}
+
+.driver > .number p {
+    rotate: 90deg;
+    font-family: var(--font-family-display);
+    font-size: var(--size-type-xxlarge)
+}
+
+.driver > .number svg {
+    width: 100px;
+    height: 242px;
+    fill: var(--color-accent);
+}
+
+.driver > .number .top {
+    rotate: 180deg;
+}
+
+.driver > main {
+    flex: 1 1 auto;
+    border: 2px solid var(--color-accent);
+    border-radius: 6px;
+    padding: var(--size-spacing-small);
+    background: var(--color-darg-background);
+    color: var(--color-text);
+}
+
+.driver > main h2 {
+    text-align: center;
+}

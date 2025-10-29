@@ -14,18 +14,19 @@
 
 .track > main div {
     flex: 1 1 auto;
-    border: 2px solid var(--color-dark-accent);
+    border: 2px solid var(--color-accent);
     border-radius: 6px;
     padding: var(--size-spacing-small);
-    background: rgba(255,255,255,0.02);
+    background: var(--color-background);
 }
 
 .track > main figure {
     margin-left: auto;
     max-width: 30%;
-    background: rgba(255,255,255,0.02);
-    border: 2px solid var(--color-dark-accent);
+    background: var(--color-background);
+    border: 2px solid var(--color-accent);
     border-radius: 6px;
     padding: 10px;
-    color: var(--color-dark-accent);
+    color: var(--color-accent);
+    text-align: center;
 }

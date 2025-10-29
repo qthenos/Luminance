@@ -13,10 +13,12 @@
   --size-type-xlarge: 2rem;
   --size-type-xxlarge: 2.5rem;
 
-  --color-dark-primary: rgb(15, 15, 15);
-  --color-dark-highlight: rgb(220 0 0);
-  --color-dark-text: rgb(245, 245, 245);
-  --color-dark-accent: rgb(55 55 55);
+  --color-primary: rgb(15, 15, 15);
+  --color-highlight: rgb(220 0 0);
+  --color-text: rgb(245, 245, 245);
+  --color-accent: rgb(55 55 55);
+  --color-background: rgba(255,255,255,0.02);
+  --color-highlight-background: rgba(55,55,55,0.5);
 
   --font-family-display: "Racing Sans One", sans-serif;
   --font-family-body: "IBM Plex Mono", monospace;
@@ -30,4 +32,13 @@
   --font-weight-light: 200;
   --font-weight-bold: 700;
 
+}
+
+body.dark-mode {
+  --color-text: rgb(15, 15, 15);
+  --color-accent: rgb(220 0 0);
+  --color-primary: rgb(245, 245, 245);
+  --color-highlight: rgb(55 55 55);
+  --color-highlight-background: rgba(255,255,255,0.3);
+  --color-background: rgba(55,55,55,0.5);
 }
