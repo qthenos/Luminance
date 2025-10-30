@@ -20,7 +20,7 @@
   <body class="page">
     <header>
       <h1>Home</h1>
-      <label class="switch">
+      <label class="switch" onchange="toggleDM(event)">
         <input type="checkbox" autocomplete="off" id="theme-toggle"/>
         <svg class="icon"><use href="./assets/icons/utilities.svg#light-mode-utility" /></svg>
         <span class="slider"></span>
@@ -29,25 +29,20 @@
     <article class="grid">
       <main>
         <ul>
-          <li>
-            <a href="./schedule.html">Schedule</a>
-            <svg class="icon"><use href="./assets/icons/utilities.svg#schedule-utility" /></svg>
-          </li>
-          <li>
-            <a href="./constructors.html">Constructors</a>
-            <svg class="icon"><use href="./assets/icons/utilities.svg#constructors-utility" /></svg>
-          </li>
-          <li>
-            <a href="./drivers.html">Drivers</a>
-            <svg class="icon"><use href="./assets/icons/utilities.svg#drivers-utility" /></svg>
-          </li>
-          <li>
-            <a href="./favorites.html">Favorites</a>
-            <svg class="icon"><use href="./assets/icons/utilities.svg#favorites-utility" /></svg>
-          </li>
+          <card-element href="./schedule.html" label="Schedule" icon="./assets/icons/utilities.svg#schedule-utility"></card-element>
+          <card-element href="./constructors.html" label="Constructors" icon="./assets/icons/utilities.svg#constructors-utility"></card-element>
+          <card-element href="./drivers.html" label="Drivers" icon="./assets/icons/utilities.svg#drivers-utility"></card-element>
+          <card-element href="./favorites.html" label="Favorites" icon="./assets/icons/utilities.svg#favorites-utility"></card-element>
         </ul> 
       </main>
     </article>
   <script src="./scripts/darkmode.js"></script>
+  <script type="module">
+    import { define } from "@calpoly/mustang";
+    import { CardElement } from "/src/card.js";
+    define({
+      "card-element": CardElement
+    });
+  </script>
   </body>
 </html>

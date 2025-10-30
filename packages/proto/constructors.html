@@ -25,39 +25,26 @@
     <article class="grid">
       <main>
         <ul>
-          <li style="background-image: url(./assets/images/team-logos/mclaren-logo.jpg);">
-            <a href="./mclaren.html">McLaren</a>
-          </li>
-          <li style="background-image: url(./assets/images/team-logos/red-bull-logo.jpg);">
-            RedBull
-          </li>
-          <li style="background-image: url(./assets/images/team-logos/vcarb-logo.jpg);">
-            VCARB
-          </li>
-          <li style="background-image: url(./assets/images/team-logos/ferrari-logo.jpg);">
-            Ferrari
-          </li>
-          <li style="background-image: url(./assets/images/team-logos/mercedes-logo.PNG);">
-            Mercedes
-          </li>
-          <li style="background-image: url(./assets/images/team-logos/williams-logo.png);">
-            Williams
-          </li>
-          <li style="background-image: url(./assets/images/team-logos/aston-martin-logo.webp);">
-            Aston Martin
-          </li>
-          <li style="background-image: url(./assets/images/team-logos/alpine-logo.jpg);">
-            Alpine
-          </li>
-          <li style="background-image: url(./assets/images/team-logos/stake-kick-sauber-logo.jpg);">
-            Sauber
-          </li>
-          <li style="background-image: url(./assets/images/team-logos/haas-logo.png);">
-            Haas
-          </li>
+          <card-element href="./public/mclaren.html" label="McLaren" backgroundImg="./assets/images/team-logos/mclaren-logo.jpg"></card-element>
+          <card-element href="" label="RedBull" backgroundImg="./assets/images/team-logos/red-bull-logo.jpg"></card-element>
+          <card-element href="" label="VCARB" backgroundImg="./assets/images/team-logos/vcarb-logo.jpg"></card-element>
+          <card-element href="" label="Ferrari" backgroundImg="./assets/images/team-logos/ferrari-logo.jpg"></card-element>
+          <card-element href="" label="Mercedes" backgroundImg="./assets/images/team-logos/mercedes-logo.PNG"></card-element>
+          <card-element href="" label="Williams" backgroundImg="./assets/images/team-logos/williams-logo.png"></card-element>
+          <card-element href="" label="Aston Martin" backgroundImg="./assets/images/team-logos/aston-martin-logo.webp"></card-element>
+          <card-element href="" label="Alpine" backgroundImg="./assets/images/team-logos/alpine-logo.jpg"></card-element>
+          <card-element href="" label="Sauber" backgroundImg="./assets/images/team-logos/stake-kick-sauber-logo.jpg"></card-element>
+          <card-element href="" label="Haas" backgroundImg="./assets/images/team-logos/haas-logo.png"></card-element>
         </ul>
       </main>
     </article>
   <script src="./scripts/darkmode.js"></script>
+  <script type="module">
+    import { define } from "@calpoly/mustang";
+    import { CardElement } from "/src/card.js";
+    define({
+      "card-element": CardElement
+    });
+  </script>
   </body>
 </html>

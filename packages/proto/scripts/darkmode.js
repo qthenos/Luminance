@@ -14,13 +14,22 @@ document.addEventListener(
     }
 )
 
-// Only add the toggle listener if the toggle exists on this page
-if (themeToggle) {
-    themeToggle.addEventListener(
-        'change', (event) => {
-            const check = themeToggle.checked;
-            document.body.classList.toggle("dark-mode", check);
-            localStorage.setItem('darkMode', check);
+function toggleDM(event) {
+    const target = event.target;
+    const check = target.checked;
+    const darkmodeEvent = new CustomEvent(
+        'darkmode:toggle', {
+        detail: { check },
         }
-    )
+    );
+    event.stopPropagation();
+    document.dispatchEvent(darkmodeEvent);
 }
+
+document.addEventListener(
+    'darkmode:toggle', (event) => {
+        const check = event.detail.check;
+        document.body.classList.toggle("dark-mode", check);
+        localStorage.setItem('darkMode', check);
+    }
+)

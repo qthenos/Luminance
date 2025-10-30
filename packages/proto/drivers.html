@@ -23,89 +23,36 @@
     <article class="grid">
       <main>
         <ol>
-            <li>
-                <a href="./albon.html">A Albon</a>
-                <img src="./assets/images/driver-heads/2025williamsalealb01right.avif">
-            </li>
-            <li>
-                A Alonso
-                <img src="./assets/images/driver-heads/2025astonmartinferalo01right.avif">
-            </li>
-            <li>
-                K Antonelli
-                <img src="./assets/images/driver-heads/2025mercedesandant01right.avif">
-            </li>
-            <li>
-                O Bearman
-                <img src="./assets/images/driver-heads/2025haasolibea01right.avif">
-            </li>
-            <li>
-                G Bortoleto
-                <img src="./assets/images/driver-heads/2025kicksaubergabbor01right.avif">
-            </li>
-            <li>
-                F Colapinto
-                <img src="./assets/images/driver-heads/2025alpinefracol01right.avif">
-            </li>
-            <li>
-                P Gasly
-                <img src="./assets/images/driver-heads/2025alpinepiegas01right.avif">
-            </li>
-            <li>
-                I Hadjar
-                <img src="./assets/images/driver-heads/2025racingbullsisahad01right.avif">
-            </li>
-            <li>
-                L Hamilton
-                <img src="./assets/images/driver-heads/2025ferrarilewham01right.avif">
-            </li>
-            <li>
-                N Hulkenberg
-                <img src="./assets/images/driver-heads/2025kicksaubernichul01right.avif">
-            </li>
-            <li>
-                L Lawson
-                <img src="./assets/images/driver-heads/2025racingbullslialaw01right.avif">
-            </li>
-            <li>
-                C Leclerc
-                <img src="./assets/images/driver-heads/2025ferrarichalec01right.avif">
-            </li>
-            <li>
-                L Norris
-                <img src="./assets/images/driver-heads/2025mclarenlannor01right.avif">
-            </li>
-            <li>
-                E Ocon
-                <img src="./assets/images/driver-heads/2025haasestoco01right.avif">
-            </li>
-            <li>
-                O Piastri
-                <img src="./assets/images/driver-heads/2025mclarenoscpia01right.avif">
-            </li>
-            <li>
-                G Russel
-                <img src="./assets/images/driver-heads/2025mercedesgeorus01right.avif">
-            </li>
-            <li>
-                C Sainz
-                <img src="./assets/images/driver-heads/2025williamscarsai01right.avif">
-            </li>
-            <li>
-                L Stroll
-                <img src="./assets/images/driver-heads/2025astonmartinlanstr01right.avif">
-            </li>
-            <li>
-                Y Tsunoda
-                <img src="./assets/images/driver-heads/2025redbullracingyuktsu01right.avif">
-            </li>
-            <li>
-                M Verstappen
-                <img src="./assets/images/driver-heads/2025redbullracingmaxver01right.avif">
-            </li>
+            <card-element href="./public/albon.html" label="A Albon" img="./assets/images/driver-heads/2025williamsalealb01right.avif"></card-element>
+            <card-element href="" label="A Alonso" img="./assets/images/driver-heads/2025astonmartinferalo01right.avif"></card-element>
+            <card-element href="" label="K Antonelli" img="./assets/images/driver-heads/2025mercedesandant01right.avif"></card-element>
+            <card-element href="" label="O Bearman" img="./assets/images/driver-heads/2025haasolibea01right.avif"></card-element>
+            <card-element href="" label="G Bortoleto" img="./assets/images/driver-heads/2025kicksaubergabbor01right.avif"></card-element>
+            <card-element href="" label="F Colapinto" img="./assets/images/driver-heads/2025alpinefracol01right.avif"></card-element>
+            <card-element href="" label="P Gasly" img="./assets/images/driver-heads/2025alpinepiegas01right.avif"></card-element>
+            <card-element href="" label="I Hadjar" img="./assets/images/driver-heads/2025racingbullsisahad01right.avif"></card-element>
+            <card-element href="" label="L Hamilton" img="./assets/images/driver-heads/2025ferrarilewham01right.avif"></card-element>
+            <card-element href="" label="N Hulkenberg" img="./assets/images/driver-heads/2025kicksaubernichul01right.avif"></card-element>
+            <card-element href="" label="L Lawson" img="./assets/images/driver-heads/2025racingbullslialaw01right.avif"></card-element>
+            <card-element href="" label="C Leclerc" img="./assets/images/driver-heads/2025ferrarichalec01right.avif"></card-element>
+            <card-element href="" label="L Norris" img="./assets/images/driver-heads/2025mclarenlannor01right.avif"></card-element>
+            <card-element href="" label="E Ocon" img="./assets/images/driver-heads/2025haasestoco01right.avif"></card-element>
+            <card-element href="" label="O Piastri" img="./assets/images/driver-heads/2025mclarenoscpia01right.avif"></card-element>
+            <card-element href="" label="G Russel" img="./assets/images/driver-heads/2025mercedesgeorus01right.avif"></card-element>
+            <card-element href="" label="C Sainz" img="./assets/images/driver-heads/2025williamscarsai01right.avif"></card-element>
+            <card-element href="" label="L Stroll" img="./assets/images/driver-heads/2025astonmartinlanstr01right.avif"></card-element>
+            <card-element href="" label="Y Tsunoda" img="./assets/images/driver-heads/2025redbullracingyuktsu01right.avif"></card-element>
+            <card-element href="" label="M Verstappen" img="./assets/images/driver-heads/2025redbullracingmaxver01right.avif"></card-element>
         </ol>
       </main>
     </article>
 <script src="./scripts/darkmode.js"></script>
+<script type="module">
+    import { define } from "@calpoly/mustang";
+    import { CardElement } from "/src/card.js";
+    define({
+        "card-element": CardElement
+    });
+</script>
 </body>
 </html>
