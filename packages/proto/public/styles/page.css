@@ -1,0 +1,40 @@
+
+body {
+    font-family: var(--font-family-body);
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+
+.page > header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: var(--size-spacing-medium);
+
+    background-color: var(--color-primary);
+    color: var(--color-highlight);
+
+    font-family: var(--font-family-display);
+
+    border-bottom: 10px solid var(--color-accent);
+    border-radius: 0 0 10px 10px;
+}
+
+.page > header h1 {
+    font-size: var(--size-type-xxlarge);
+}
+
+.page > header h2 {
+    font-size: var(--size-type-small);
+}
+
+.page a, .page a:visited {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.page label svg {
+    width: 50px;
+    fill: var(--color-highlight);
+}

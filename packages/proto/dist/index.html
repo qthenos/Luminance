@@ -4,34 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luminance</title>
-    <link rel="icon" href="/assets/favicon-C_iBtEXR.ico">
+    <link rel="icon" href="./images/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Racing+Sans+One&display=swap" rel="stylesheet">
-
-    <script type="module" crossorigin src="/assets/main-BGkA6Dri.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/card-Cu8069T9.js">
-    <link rel="stylesheet" crossorigin href="/assets/card-0lB7mmkc.css">
-    <link rel="stylesheet" crossorigin href="/assets/main-BFTic_nD.css">
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/page.css" />
+    <link rel="stylesheet" href="./styles/grid.css" />
+    <link rel="stylesheet" href="./styles/util.css" />
+    <script type="module" crossorigin src="/assets/main-cggszCPl.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/card-7c4q2rth.js">
   </head>
   <body class="page">
     <header>
       <h1>Home</h1>
       <label class="switch" onchange="toggleDM(event)">
         <input type="checkbox" autocomplete="off" id="theme-toggle"/>
-        <svg class="icon"><use href="/assets/utilities-DnbXMq0Z.svg#light-mode-utility" /></svg>
+        <svg class="icon"><use href="./icons/utilities.svg#light-mode-utility" /></svg>
         <span class="slider"></span>
       </label>
     </header>
     <article class="grid">
       <main>
         <ul>
-          <card-element href="./schedule.html" label="Schedule" icon="./assets/icons/utilities.svg#schedule-utility"></card-element>
-          <card-element href="./constructors.html" label="Constructors" icon="./assets/icons/utilities.svg#constructors-utility"></card-element>
-          <card-element href="./drivers.html" label="Drivers" icon="./assets/icons/utilities.svg#drivers-utility"></card-element>
-          <card-element href="./favorites.html" label="Favorites" icon="./assets/icons/utilities.svg#favorites-utility"></card-element>
+          <card-element href="./schedule.html" label="Schedule" icon="./icons/utilities.svg#schedule-utility"></card-element>
+          <card-element href="./constructors.html" label="Constructors" icon="./icons/utilities.svg#constructors-utility"></card-element>
+          <card-element href="./drivers.html" label="Drivers" icon="./icons/utilities.svg#drivers-utility"></card-element>
+          <card-element href="./favorites.html" label="Favorites" icon="./icons/utilities.svg#favorites-utility"></card-element>
         </ul> 
       </main>
     </article>
