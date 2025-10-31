@@ -1,0 +1,102 @@
+[
+    {
+        "link": "./albon.html",
+        "label": "A Albon",
+        "img": "./images/driver-heads/2025williamsalealb01right.avif"
+    },
+    {
+        "link": "",
+        "label": "A Alonso",
+        "img": "./images/driver-heads/2025astonmartinferalo01right.avif"
+    },
+    {
+        "link": "",
+        "label": "K Antonelli",
+        "img": "./images/driver-heads/2025mercedesandant01right.avif"
+    },
+    {
+        "link": "",
+        "label": "O Bearman",
+        "img": "./images/driver-heads/2025haasolibea01right.avif"
+    },
+    {
+        "link": "",
+        "label": "G Bortoleto",
+        "img": "./images/driver-heads/2025kicksaubergabbor01right.avif"
+    },
+    {
+        "link": "",
+        "label": "F Colapinto",
+        "img": "./images/driver-heads/2025alpinefracol01right.avif"
+    },
+    {
+        "link": "",
+        "label": "P Gasly",
+        "img": "./images/driver-heads/2025alpinepiegas01right.avif"
+    },
+    {
+        "link": "",
+        "label": "I Hadjar",
+        "img": "./images/driver-heads/2025racingbullsisahad01right.avif"
+    },
+    {
+        "link": "",
+        "label": "L Hamilton",
+        "img": "./images/driver-heads/2025ferrarilewham01right.avif"
+    },
+    {
+        "link": "",
+        "label": "N Hulkenberg",
+        "img": "./images/driver-heads/2025kicksaubernichul01right.avif"
+    },
+    {
+        "link": "",
+        "label": "L Lawson",
+        "img": "./images/driver-heads/2025racingbullslialaw01right.avif"
+    },
+    {
+        "link": "",
+        "label": "C Leclerc",
+        "img": "./images/driver-heads/2025ferrarichalec01right.avif"
+    },
+    {
+        "link": "",
+        "label": "L Norris",
+        "img": "./images/driver-heads/2025mclarenlannor01right.avif"
+    },
+    {
+        "link": "",
+        "label": "E Ocon",
+        "img": "./images/driver-heads/2025haasestoco01right.avif"
+    },
+    {
+        "link": "",
+        "label": "O Piastri",
+        "img": "./images/driver-heads/2025mclarenoscpia01right.avif"
+    },
+    {
+        "link": "",
+        "label": "G Russel",
+        "img": "./images/driver-heads/2025mercedesgeorus01right.avif"
+    },
+    {
+        "link": "",
+        "label": "C Sainz",
+        "img": "./images/driver-heads/2025williamscarsai01right.avif"
+    },
+    {
+        "link": "",
+        "label": "L Stroll",
+        "img": "./images/driver-heads/2025astonmartinlanstr01right.avif"
+    },
+    {
+        "link": "",
+        "label": "Y Tsunoda",
+        "img": "./images/driver-heads/2025redbullracingyuktsu01right.avif"
+    },
+    {
+        "link": "",
+        "label": "M Verstappen",
+        "img": "./images/driver-heads/2025redbullracingmaxver01right.avif"
+    }
+]

@@ -22,29 +22,29 @@ export class CardElement extends LitElement {
     override render() {
         if (this.backgroundImg) {
             return html`
-                <li style="background-image: url(${this.backgroundImg});">
+                <div class="card" style="background-image: url(${this.backgroundImg});">
                     <a href="${this.href}">${this.label}</a>
-                </li>
+                </div>
             `;
         } else if (this.img) {
             return html`
-                <li>
+                <div class="card">
                     <a href="${this.href}">${this.label}</a>
                     <img src="${this.img}">
-                </li>
+                </div>
             `;
         } else if (this.icon) {
             return html`
-                <li>
+                <div class="card">
                     <a href="${this.href}">${this.label}</a>
                     <svg class="icon"><use href="${this.icon}" /></svg>
-                </li>
+                </div>
             `;
         } else {
             return html`
-                <li>
+                <div class="card">
                     <a href="${this.href}">${this.label}</a>
-                </li>
+                </div>
             `;
         }
     }
@@ -52,7 +52,7 @@ export class CardElement extends LitElement {
     static styles = [
         reset.styles,
         css`
-            li {
+            .card {
                 display: flex;
                 aspect-ratio: 1 / 1;
                 align-items: center;
@@ -68,7 +68,7 @@ export class CardElement extends LitElement {
                 align-items: end;
             } 
 
-            li > a {
+            .card > a {
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
@@ -81,7 +81,7 @@ export class CardElement extends LitElement {
                 z-index: 2;
             }
 
-            li > svg {
+            .card > svg {
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -92,12 +92,12 @@ export class CardElement extends LitElement {
                 z-index: 0;
             }
 
-            li:has(svg, img) > :not(svg, img) {
+            .card:has(svg, img) > :not(svg, img) {
                 position: relative;
                 z-index: 1;
             }
 
-            li > img {
+            .card > img {
                 top: 0px;
                 position: absolute;
                 width: 110px;
@@ -109,7 +109,7 @@ export class CardElement extends LitElement {
                 z-index: 0;
             }
 
-            li:has(img) > a {
+            .card:has(img) > a {
                 padding: 1px;
             }
         `

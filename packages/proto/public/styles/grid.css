@@ -13,8 +13,3 @@
 .grid > main {
     display: contents;
 }
-
-.grid > main ul,
-.grid > main ol {
-    display: contents;
-}

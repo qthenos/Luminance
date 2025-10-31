@@ -1,0 +1,122 @@
+[
+    {
+        "link": "./australia.html",
+        "label": "Australia",
+        "icon": "./icons/circuits.svg#melbourne-circuit"
+    },
+    {
+        "link": "",
+        "label": "China",
+        "icon": "./icons/circuits.svg#shanghai-circuit"
+    },
+    {
+        "link": "",
+        "label": "Japan",
+        "icon": "./icons/circuits.svg#suzuka-circuit"
+    },
+    {
+        "link": "",
+        "label": "Bahrain",
+        "icon": "./icons/circuits.svg#sakhir-circuit"
+    },
+    {
+        "link": "",
+        "label": "Saudi Arabia",
+        "icon": "./icons/circuits.svg#jeddah-circuit"
+    },
+    {
+        "link": "",
+        "label": "USA - Miami",
+        "icon": "./icons/circuits.svg#miami-circuit"
+    },
+    {
+        "link": "",
+        "label": "Italy - Imola",
+        "icon": "./icons/circuits.svg#imola-circuit"
+    },
+    {
+        "link": "",
+        "label": "Monaco",
+        "icon": "./icons/circuits.svg#monaco-circuit"
+    },
+    {
+        "link": "",
+        "label": "Spain",
+        "icon": "./icons/circuits.svg#barcelona-circuit"
+    },
+    {
+        "link": "",
+        "label": "Canada",
+        "icon": "./icons/circuits.svg#mosport-circuit"
+    },
+    {
+        "link": "",
+        "label": "Austria",
+        "icon": "./icons/circuits.svg#spielberg-circuit"
+    },
+    {
+        "link": "",
+        "label": "United Kingdom",
+        "icon": "./icons/circuits.svg#silverstone-circuit"
+    },
+    {
+        "link": "",
+        "label": "Belgium",
+        "icon": "./icons/circuits.svg#spa-circuit"
+    },
+    {
+        "link": "",
+        "label": "Hungary",
+        "icon": "./icons/circuits.svg#hungaroring-circuit"
+    },
+    {
+        "link": "",
+        "label": "Netherlands",
+        "icon": "./icons/circuits.svg#zandvort-circuit"
+    },
+    {
+        "link": "",
+        "label": "Italy - Monza",
+        "icon": "./icons/circuits.svg#monza-circuit"
+    },
+    {
+        "link": "",
+        "label": "Azerbaijan",
+        "icon": "./icons/circuits.svg#baku-circuit"
+    },
+    {
+        "link": "",
+        "label": "Singapore",
+        "icon": "./icons/circuits.svg#marina-bay-circuit"
+    },
+    {
+        "link": "",
+        "label": "USA - Austin",
+        "icon": "./icons/circuits.svg#austin-circuit"
+    },
+    {
+        "link": "",
+        "label": "Mexico",
+        "icon": "./icons/circuits.svg#mexico-city-circuit"
+    },
+    {
+        "link": "",
+        "label": "Brazil",
+        "icon": "./icons/circuits.svg#sao-paulo-circuit"
+    },
+    {
+        "link": "",
+        "label": "USA - Vegas",
+        "icon": "./icons/circuits.svg#vegas-circuit"
+    },
+    {
+        "link": "",
+        "label": "Qatar",
+        "icon": "./icons/circuits.svg#qatar-circuit"
+    },
+    {
+        "link": "",
+        "label": "Abu Dhabi",
+        "icon": "./icons/circuits.svg#yas-marina-circuit"
+    }
+]

@@ -28,20 +28,17 @@
     </header>
     <article class="grid">
       <main>
-        <ul>
-          <card-element href="./schedule.html" label="Schedule" icon="./icons/utilities.svg#schedule-utility"></card-element>
-          <card-element href="./constructors.html" label="Constructors" icon="./icons/utilities.svg#constructors-utility"></card-element>
-          <card-element href="./drivers.html" label="Drivers" icon="./icons/utilities.svg#drivers-utility"></card-element>
-          <card-element href="./favorites.html" label="Favorites" icon="./icons/utilities.svg#favorites-utility"></card-element>
-        </ul> 
+        <deck-element src="./data/mainPages.json"></deck-element>
       </main>
     </article>
   <script src="./scripts/darkmode.js"></script>
   <script type="module">
     import { define } from "@calpoly/mustang";
     import { CardElement } from "/src/card.js";
+    import { DeckElement } from "/src/deck.js";
     define({
-      "card-element": CardElement
+      "card-element": CardElement,
+      "deck-element": DeckElement
     });
   </script>
   </body>
