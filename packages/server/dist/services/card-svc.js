@@ -44,4 +44,23 @@ function get(label) {
     throw `${label} Not Found`;
   });
 }
-var card_svc_default = { index, get };
+function create(json) {
+  const c = new CardModel(json);
+  return c.save();
+}
+function update(label, card) {
+  return CardModel.findOneAndUpdate({ label }, card, {
+    new: true
+  }).then((updated) => {
+    if (!updated) throw `${label} not updated`;
+    else return updated;
+  });
+}
+function remove(label) {
+  return CardModel.findOneAndDelete({ label }).then(
+    (deleted) => {
+      if (!deleted) throw `${label} not deleted`;
+    }
+  );
+}
+var card_svc_default = { index, get, create, update, remove };

@@ -30,4 +30,29 @@ function get(label: String): Promise<Card> {
     });
 }
 
-export default { index, get };
+function create(json: Card): Promise<Card> {
+  const c = new CardModel(json);
+  return c.save();
+}
+
+function update(
+  label: String,
+  card: Card
+): Promise<Card> {
+  return CardModel.findOneAndUpdate({ label }, card, {
+    new: true
+  }).then((updated) => {
+    if (!updated) throw `${label} not updated`;
+    else return updated as Card;
+  });
+}
+
+function remove(label: String): Promise<void> {
+  return CardModel.findOneAndDelete({ label }).then(
+    (deleted) => {
+      if (!deleted) throw `${label} not deleted`;
+    }
+  );
+}
+
+export default { index, get, create, update, remove };
