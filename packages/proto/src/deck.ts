@@ -2,7 +2,7 @@ import { html, css, LitElement } from "lit";
 import { property, state } from "lit/decorators.js";
 import { define } from "@calpoly/mustang";
 import reset from "./styles/reset.css.ts";
-import { Card } from "./models/deck.ts";
+import { Card } from "./models/card.ts";
 import { CardElement } from "./card.ts";
 
 export class DeckElement extends LitElement {
