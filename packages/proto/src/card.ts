@@ -3,116 +3,117 @@ import { property } from "lit/decorators.js";
 import reset from "./styles/reset.css.ts";
 
 export class CardElement extends LitElement {
+  @property()
+  backgroundImg?: string;
 
-    @property()
-    backgroundImg?: string;
+  @property()
+  img?: string;
 
-    @property()
-    img?: string;
+  @property()
+  icon?: string;
 
-    @property()
-    icon?: string;
+  @property()
+  href?: string;
 
-    @property()
-    href?: string;
+  @property()
+  label?: string;
 
-    @property()
-    label?: string
+  @property()
+  category?: string;
 
-    override render() {
-        if (this.backgroundImg) {
-            return html`
-                <div class="card" style="background-image: url(${this.backgroundImg});">
-                    <a href="${this.href}">${this.label}</a>
-                </div>
-            `;
-        } else if (this.img) {
-            return html`
-                <div class="card">
-                    <a href="${this.href}">${this.label}</a>
-                    <img src="${this.img}">
-                </div>
-            `;
-        } else if (this.icon) {
-            return html`
-                <div class="card">
-                    <a href="${this.href}">${this.label}</a>
-                    <svg class="icon"><use href="${this.icon}" /></svg>
-                </div>
-            `;
-        } else {
-            return html`
-                <div class="card">
-                    <a href="${this.href}">${this.label}</a>
-                </div>
-            `;
-        }
+  override render() {
+    if (this.backgroundImg) {
+      return html`
+        <div class="card" style="background-image: url(${this.backgroundImg});">
+          <a href="${this.href}">${this.label}</a>
+        </div>
+      `;
+    } else if (this.img) {
+      return html`
+        <div class="card">
+          <a href="${this.href}">${this.label}</a>
+          <img src="${this.img}" />
+        </div>
+      `;
+    } else if (this.icon) {
+      return html`
+        <div class="card">
+          <a href="${this.href}">${this.label}</a>
+          <svg class="icon"><use href="${this.icon}" /></svg>
+        </div>
+      `;
+    } else {
+      return html`
+        <div class="card">
+          <a href="${this.href}">${this.label}</a>
+        </div>
+      `;
     }
+  }
 
-    static styles = [
-        reset.styles,
-        css`
-            .card {
-                display: flex;
-                aspect-ratio: 1 / 1;
-                align-items: center;
-                justify-content: center;
-                border: 2px solid var(--color-accent);
-                border-radius: 6px;
-                padding: var(--size-spacing-small);
-                background: var(--color-background);
-                background-size: contain;
+  static styles = [
+    reset.styles,
+    css`
+      .card {
+        display: flex;
+        aspect-ratio: 1 / 1;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--color-accent);
+        border-radius: 6px;
+        padding: var(--size-spacing-small);
+        background: var(--color-background);
+        background-size: contain;
 
-                position: relative;
-                overflow: hidden;
-                align-items: end;
-            } 
+        position: relative;
+        overflow: hidden;
+        align-items: end;
+      }
 
-            .card > a {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                padding: var(--size-spacing-small);
-                border: 2px solid var(--color-accent);
-                border-radius: 6px;
-                background: var(--color-highlight-background);
-                text-decoration: none;
-                color: inherit;
-                z-index: 2;
-            }
+      .card > a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--size-spacing-small);
+        border: 2px solid var(--color-accent);
+        border-radius: 6px;
+        background: var(--color-highlight-background);
+        text-decoration: none;
+        color: inherit;
+        z-index: 2;
+      }
 
-            .card > svg {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                display: block;
-                object-fit: cover;
-                fill: var(--color-highlight);
-                opacity: 0.5;
-                z-index: 0;
-            }
+      .card > svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        fill: var(--color-highlight);
+        opacity: 0.5;
+        z-index: 0;
+      }
 
-            .card:has(svg, img) > :not(svg, img) {
-                position: relative;
-                z-index: 1;
-            }
+      .card:has(svg, img) > :not(svg, img) {
+        position: relative;
+        z-index: 1;
+      }
 
-            .card > img {
-                top: 0px;
-                position: absolute;
-                width: 110px;
-                height: 110px;
-                display: block;
-                overflow: clip;
-                object-fit: cover;
-                object-position: top;
-                z-index: 0;
-            }
+      .card > img {
+        top: 0px;
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        display: block;
+        overflow: clip;
+        object-fit: cover;
+        object-position: top;
+        z-index: 0;
+      }
 
-            .card:has(img) > a {
-                padding: 1px;
-            }
-        `
-    ]
-    
+      .card:has(img) > a {
+        padding: 1px;
+      }
+    `,
+  ];
 }

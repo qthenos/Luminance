@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Luminance</title>
+    <link rel="icon" href="./images/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Racing+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/page.css" />
+    <link rel="stylesheet" href="./styles/grid.css" />
+    <link rel="stylesheet" href="./styles/driver.css" />
+  </head>
+  <body class="page">
+    <mu-auth provides="blazing:auth">
+      <header-element name="Alexander Albon"></header-element>
+      <article class="driver">
+        <figure>
+          <img src="./images/driver-heads/2025williamsalealb01right.avif" />
+        </figure>
+        <main>
+          <h2>Bio</h2>
+          <p>
+            Alex Albon is a Thai-British Formula One driver currently racing for
+            Williams Racing. Born on March 23, 1996, in London, Albon rose
+            through the junior ranks of motorsport, impressing in karting and
+            Formula 2 before making his F1 debut with Toro Rosso in 2019. Later
+            that year, he was promoted to Red Bull Racing, where he earned
+            several strong finishes and a podium. Known for his smooth driving
+            style, resilience, and technical skill, Albon has since become a key
+            figure in Williams’ resurgence, consistently delivering standout
+            performances against stronger competition.
+          </p>
+          <h2>Standings</h2>
+          <ul>
+            <li><strong>Current Team:</strong> Williams</li>
+            <li><strong>Points:</strong> 73</li>
+            <li><strong>Position:</strong> 8th</li>
+          </ul>
+          <h2>Stats</h2>
+          <ul>
+            <li><strong>Grand Prix Entered:</strong> 124</li>
+            <li><strong>Career Points:</strong> 313</li>
+            <li><strong>Highest Race Finish:</strong> 3 (x2)</li>
+            <li><strong>Podiums:</strong> 2</li>
+            <li><strong>Highest Grid Position:</strong> 4 (x5)</li>
+            <li><strong>Pole Positions:</strong> 0</li>
+            <li><strong>World Championships:</strong> 0</li>
+            <li><strong>DNFs:</strong> 21</li>
+          </ul>
+        </main>
+        <div class="number">
+          <svg class="top">
+            <use href="./icons/designs.svg#racing-lines-top-design" />
+          </svg>
+          <p>23</p>
+          <svg class="bot">
+            <use href="./icons/designs.svg#racing-lines-bot-design" />
+          </svg>
+        </div>
+      </article>
+    </mu-auth>
+    <script src="./scripts/darkmode.js"></script>
+    <script type="module">
+      import { define, Auth } from "@calpoly/mustang";
+      import { HeaderElement } from "/src/header.js";
+      define({
+        "header-element": HeaderElement,
+        "mu-auth": Auth.Provider,
+      });
+    </script>
+  </body>
+</html>

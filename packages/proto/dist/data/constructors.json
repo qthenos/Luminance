@@ -1,52 +1,62 @@
 [
-    {
-        "link": "./mclaren.html",
-        "label": "McLaren",
-        "backImg": "./images/team-logos/mclaren-logo.jpg"
-    },
-    {
-        "link": "",
-        "label": "RedBull",
-        "backImg": "./images/team-logos/red-bull-logo.jpg"
-    },
-    {
-        "link": "",
-        "label": "VCARB",
-        "backImg": "./images/team-logos/vcarb-logo.jpg"
-    },
-    {
-        "link": "",
-        "label": "Ferrari",
-        "backImg": "./images/team-logos/ferrari-logo.jpg"
-    },
-    {
-        "link": "",
-        "label": "Mercedes",
-        "backImg": "./images/team-logos/mercedes-logo.PNG"
-    },
-    {
-        "link": "",
-        "label": "Williams",
-        "backImg": "./images/team-logos/williams-logo.png"
-    },
-    {
-        "link": "",
-        "label": "Aston Martin",
-        "backImg": "./images/team-logos/aston-martin-logo.webp"
-    },
-    {
-        "link": "",
-        "label": "Alpine",
-        "backImg": "./images/team-logos/alpine-logo.jpg"
-    },
-    {
-        "link": "",
-        "label": "Sauber",
-        "backImg": "./images/team-logos/stake-kick-sauber-logo.jpg"
-    },
-    {
-        "link": "",
-        "label": "Haas",
-        "backImg": "./images/team-logos/haas-logo.png"
-    }
+  {
+    "link": "./mclaren.html",
+    "label": "McLaren",
+    "backImg": "./images/team-logos/mclaren-logo.jpg",
+    "category": "constructors"
+  },
+  {
+    "link": "",
+    "label": "RedBull",
+    "backImg": "./images/team-logos/red-bull-logo.jpg",
+    "category": "constructors"
+  },
+  {
+    "link": "",
+    "label": "VCARB",
+    "backImg": "./images/team-logos/vcarb-logo.jpg",
+    "category": "constructors"
+  },
+  {
+    "link": "",
+    "label": "Ferrari",
+    "backImg": "./images/team-logos/ferrari-logo.jpg",
+    "category": "constructors"
+  },
+  {
+    "link": "",
+    "label": "Mercedes",
+    "backImg": "./images/team-logos/mercedes-logo.PNG",
+    "category": "constructors"
+  },
+  {
+    "link": "",
+    "label": "Williams",
+    "backImg": "./images/team-logos/williams-logo.png",
+    "category": "constructors"
+  },
+  {
+    "link": "",
+    "label": "Aston Martin",
+    "backImg": "./images/team-logos/aston-martin-logo.webp",
+    "category": "constructors"
+  },
+  {
+    "link": "",
+    "label": "Alpine",
+    "backImg": "./images/team-logos/alpine-logo.jpg",
+    "category": "constructors"
+  },
+  {
+    "link": "",
+    "label": "Sauber",
+    "backImg": "./images/team-logos/stake-kick-sauber-logo.jpg",
+    "category": "constructors"
+  },
+  {
+    "link": "",
+    "label": "Haas",
+    "backImg": "./images/team-logos/haas-logo.png",
+    "category": "constructors"
+  }
 ]

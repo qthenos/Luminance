@@ -12,6 +12,14 @@ router.get("/", (_, res: Response) => {
     .catch((err) => res.status(500).send(err));
 });
 
+router.get("/category/:category", (req: Request, res: Response) => {
+  const { category } = req.params;
+
+  Cards.getByCategory(category)
+    .then((cards: Card[]) => res.json(cards))
+    .catch((err) => res.status(404).send(err));
+});
+
 router.get("/:label", (req: Request, res: Response) => {
   const { label } = req.params;
 
@@ -24,9 +32,7 @@ router.post("/", (req: Request, res: Response) => {
   const newCard = req.body;
 
   Cards.create(newCard)
-    .then((card: Card) =>
-      res.status(201).json(card)
-    )
+    .then((card: Card) => res.status(201).json(card))
     .catch((err) => res.status(500).send(err));
 });
 

@@ -1,23 +1,26 @@
-
 [
-    {
-        "link": "./schedule.html",
-        "label": "Schedule",
-        "icon": "./icons/utilities.svg#schedule-utility"
-    },
-    {
-        "link": "./constructors.html",
-        "label": "Constructors",
-        "icon": "./icons/utilities.svg#constructors-utility"
-    },
-    {
-        "link": "./drivers.html",
-        "label": "Drivers",
-        "icon": "./icons/utilities.svg#drivers-utility"
-    },
-    {
-        "link": "./favorites.html",
-        "label": "Favorites",
-        "icon": "./icons/utilities.svg#favorites-utility"
-    }
+  {
+    "link": "./schedule.html",
+    "label": "Schedule",
+    "icon": "./icons/utilities.svg#schedule-utility",
+    "category": "mainPages"
+  },
+  {
+    "link": "./constructors.html",
+    "label": "Constructors",
+    "icon": "./icons/utilities.svg#constructors-utility",
+    "category": "mainPages"
+  },
+  {
+    "link": "./drivers.html",
+    "label": "Drivers",
+    "icon": "./icons/utilities.svg#drivers-utility",
+    "category": "mainPages"
+  },
+  {
+    "link": "./favorites.html",
+    "label": "Favorites",
+    "icon": "./icons/utilities.svg#favorites-utility",
+    "category": "mainPages"
+  }
 ]

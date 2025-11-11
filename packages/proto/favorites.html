@@ -1,34 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Luminance</title>
-    <link rel="icon" href="./images/favicon.ico">
+    <link rel="icon" href="./images/favicon.ico" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Racing+Sans+One&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/tokens.css" />
     <link rel="stylesheet" href="./styles/page.css" />
     <link rel="stylesheet" href="./styles/grid.css" />
-</head>
-<body class="page">
-    <header>
-        <h1>Favorites</h1>
-        <a href="./index.html">Home</a>
-    </header>
-<script src="./scripts/darkmode.js"></script>
-<script type="module">
-    import { define } from "@calpoly/mustang";
-    import { CardElement } from "/src/card.js";
-    import { DeckElement } from "/src/deck.js";
-    define({
+  </head>
+  <body class="page">
+    <mu-auth provides="blazing:auth">
+      <header-element name="Favorites"></header-element>
+    </mu-auth>
+    <script src="./scripts/darkmode.js"></script>
+    <script type="module">
+      import { define, Auth } from "@calpoly/mustang";
+      import { CardElement } from "/src/card.js";
+      import { DeckElement } from "/src/deck.js";
+      import { HeaderElement } from "/src/header.js";
+      define({
         "card-element": CardElement,
-        "deck-element": DeckElement
-    });
-</script>
-</body>
+        "deck-element": DeckElement,
+        "header-element": HeaderElement,
+        "mu-auth": Auth.Provider,
+      });
+    </script>
+  </body>
 </html>

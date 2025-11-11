@@ -1,30 +1,29 @@
-
 .team > figure {
-    background: var(--color-background);
-    border: 2px solid var(--color-accent);
-    border-radius: 6px;
-    max-width: 50%;
-    margin-inline: auto;
+  background: var(--color-background);
+  border: 2px solid var(--color-accent);
+  border-radius: 6px;
+  max-width: 50%;
+  margin-inline: auto;
 }
 
 .team > figure img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .team > main {
-    background: var(--color-background);
-    border: 2px solid var(--color-accent);
-    border-radius: 6px;
+  background: var(--color-background);
+  border: 2px solid var(--color-accent);
+  border-radius: 6px;
 }
 
 .team ul {
-    list-style: disc;
-    padding-left: 2em;
+  list-style: disc;
+  padding-left: 2em;
 }
 
 .team ul ul {
-    list-style: circle;
-    padding-left: 2em;
+  list-style: circle;
+  padding-left: 2em;
 }

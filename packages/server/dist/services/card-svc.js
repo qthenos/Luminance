@@ -8,17 +8,21 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
+  if ((from && typeof from === "object") || typeof from === "function") {
     for (let key of __getOwnPropNames(from))
       if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+        __defProp(to, key, {
+          get: () => from[key],
+          enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
+        });
   }
   return to;
 };
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var __toCommonJS = (mod) =>
+  __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var card_svc_exports = {};
 __export(card_svc_exports, {
-  default: () => card_svc_default
+  default: () => card_svc_default,
 });
 module.exports = __toCommonJS(card_svc_exports);
 var import_mongoose = require("mongoose");
@@ -28,20 +32,25 @@ const CardSchema = new import_mongoose.Schema(
     label: { type: String, required: true, trim: true },
     icon: { type: String, trim: true },
     img: { type: String, trim: true },
-    backImg: { type: String, trim: true }
+    backImg: { type: String, trim: true },
+    category: { type: String, trim: true },
   },
-  { collection: "lum-cards" }
+  { collection: "lum-cards" },
 );
-const CardModel = (0, import_mongoose.model)(
-  "Card",
-  CardSchema
-);
+const CardModel = (0, import_mongoose.model)("Card", CardSchema);
 function index() {
   return CardModel.find();
 }
 function get(label) {
-  return CardModel.find({ label }).then((list) => list[0]).catch((err) => {
-    throw `${label} Not Found`;
+  return CardModel.find({ label })
+    .then((list) => list[0])
+    .catch((err) => {
+      throw `${label} Not Found`;
+    });
+}
+function getByCategory(category) {
+  return CardModel.find({ category }).catch((err) => {
+    throw `${category} Not Found`;
   });
 }
 function create(json) {
@@ -50,17 +59,15 @@ function create(json) {
 }
 function update(label, card) {
   return CardModel.findOneAndUpdate({ label }, card, {
-    new: true
+    new: true,
   }).then((updated) => {
     if (!updated) throw `${label} not updated`;
     else return updated;
   });
 }
 function remove(label) {
-  return CardModel.findOneAndDelete({ label }).then(
-    (deleted) => {
-      if (!deleted) throw `${label} not deleted`;
-    }
-  );
+  return CardModel.findOneAndDelete({ label }).then((deleted) => {
+    if (!deleted) throw `${label} not deleted`;
+  });
 }
-var card_svc_default = { index, get, create, update, remove };
+var card_svc_default = { index, get, getByCategory, create, update, remove };

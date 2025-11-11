@@ -1,23 +1,23 @@
 import { css } from "lit";
 
 const styles = css`
-    * {
+  * {
     margin: 0;
     box-sizing: border-box;
-    }
+  }
 
-    body {
+  body {
     line-height: 1.5;
-    }
+  }
 
-    img {
+  img {
     max-width: 100%;
-    }
+  }
 
-    ul {
+  ul {
     list-style: none;
     padding: 0;
-    }
+  }
 `;
 
 export default { styles };

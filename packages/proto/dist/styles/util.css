@@ -1,4 +1,3 @@
-
 .switch {
   position: relative;
   display: inline-flex;
@@ -22,8 +21,8 @@
   width: 60px;
   height: 34px;
   background-color: var(--color-accent);
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   flex-shrink: 0;
 }
 
@@ -35,10 +34,9 @@
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
-
 
 input:checked ~ .slider:before {
   -webkit-transform: translateX(26px);
