@@ -8,6 +8,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        login: resolve(__dirname, "login.html"),
         main: resolve(__dirname, "index.html"),
         schedule: resolve(__dirname, "schedule.html"),
         constructors: resolve(__dirname, "constructors.html"),

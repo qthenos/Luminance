@@ -5,4 +5,5 @@ export interface Card {
   img: string;
   backImg: string;
   category: string;
+  orderNumber: number;
 }

@@ -20,53 +20,48 @@
     <link rel="stylesheet" href="./styles/tokens.css" />
     <link rel="stylesheet" href="./styles/page.css" />
     <link rel="stylesheet" href="./styles/grid.css" />
-    <link rel="stylesheet" href="./styles/util.css" />
     <link rel="stylesheet" href="./styles/team.css" />
+    <script type="module" crossorigin src="/assets/mclaren-DTihoUeg.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/reset.css-DFjQgTct.js">
+    <link rel="modulepreload" crossorigin href="/assets/header-DkDrlPzL.js">
   </head>
   <body class="page">
-    <header>
-      <h1><a href="./index.html">Drivers</a></h1>
-      <label class="switch" onchange="toggleDM(event)">
-        <input type="checkbox" autocomplete="off" id="theme-toggle" />
-        <svg class="icon">
-          <use href="./icons/utilities.svg#light-mode-utility" />
-        </svg>
-        <span class="slider"></span>
-      </label>
-    </header>
-    <article class="team">
-      <figure>
-        <img
-          src="./images/2025mclarencarright.avif"
-          alt="Sideprofile of McLaren's 2025 car facing right."
-          width="400"
-        />
-      </figure>
-      <main>
-        <h2>Ranking:</h2>
-        <ul>
-          <li>WCC Position: 1</li>
-          <li>Current Points: 623</li>
-        </ul>
-        <h2>Drivers</h2>
-        <ul>
-          <li>
-            Oscar Piastri
-            <ul>
-              <li>Car Number: 81</li>
-              <li>Joined Team: 2023</li>
-            </ul>
-          </li>
-          <li>
-            Lando Norris
-            <ul>
-              <li>Car Number: 4</li>
-              <li>Joined Team: 2017</li>
-            </ul>
-          </li>
-        </ul>
-      </main>
-    </article>
+    <mu-auth provides="blazing:auth">
+      <header-element name="McLaren"></header-element>
+      <article class="team">
+        <figure>
+          <img
+            src="./images/2025mclarencarright.avif"
+            alt="Sideprofile of McLaren's 2025 car facing right."
+            width="400"
+          />
+        </figure>
+        <main>
+          <h2>Ranking:</h2>
+          <ul>
+            <li>WCC Position: 1</li>
+            <li>Current Points: 623</li>
+          </ul>
+          <h2>Drivers</h2>
+          <ul>
+            <li>
+              Oscar Piastri
+              <ul>
+                <li>Car Number: 81</li>
+                <li>Joined Team: 2023</li>
+              </ul>
+            </li>
+            <li>
+              Lando Norris
+              <ul>
+                <li>Car Number: 4</li>
+                <li>Joined Team: 2017</li>
+              </ul>
+            </li>
+          </ul>
+        </main>
+      </article>
+    </mu-auth>
     <script src="./scripts/darkmode.js"></script>
   </body>
 </html>

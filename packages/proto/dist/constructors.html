@@ -21,31 +21,21 @@
     <link rel="stylesheet" href="./styles/tokens.css" />
     <link rel="stylesheet" href="./styles/page.css" />
     <link rel="stylesheet" href="./styles/grid.css" />
-    <link rel="stylesheet" href="./styles/util.css" />
-    <script
-      type="module"
-      crossorigin
-      src="/assets/constructors-CqpbLpUv.js"
-    ></script>
-    <link rel="modulepreload" crossorigin href="/assets/deck-DziEAApu.js" />
+    <script type="module" crossorigin src="/assets/constructors-CrpZ1hwN.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/reset.css-DFjQgTct.js">
+    <link rel="modulepreload" crossorigin href="/assets/deck-CUqPGnvV.js">
+    <link rel="modulepreload" crossorigin href="/assets/header-DkDrlPzL.js">
   </head>
 
   <body class="page">
-    <header>
-      <h1><a href="./index.html">Constructors</a></h1>
-      <label class="switch" onchange="toggleDM(event)">
-        <input type="checkbox" autocomplete="off" id="theme-toggle" />
-        <svg class="icon">
-          <use href="./icons/utilities.svg#light-mode-utility" />
-        </svg>
-        <span class="slider"></span>
-      </label>
-    </header>
-    <article class="grid">
-      <main>
-        <deck-element src="/api/cards/category/constructors"></deck-element>
-      </main>
-    </article>
+    <mu-auth provides="blazing:auth">
+      <header-element name="Constructors"></header-element>
+      <article class="grid">
+        <main>
+          <deck-element src="/api/cards/category/constructors"></deck-element>
+        </main>
+      </article>
+    </mu-auth>
     <script src="./scripts/darkmode.js"></script>
   </body>
 </html>

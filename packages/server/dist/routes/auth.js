@@ -10,35 +10,26 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 var __copyProps = (to, from, except, desc) => {
-  if ((from && typeof from === "object") || typeof from === "function") {
+  if (from && typeof from === "object" || typeof from === "function") {
     for (let key of __getOwnPropNames(from))
       if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, {
-          get: () => from[key],
-          enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
-        });
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (
-  (target = mod != null ? __create(__getProtoOf(mod)) : {}),
-  __copyProps(
-    // If the importer is in node compatibility mode or this is not an ESM
-    // file that has been converted to a CommonJS file using a Babel-
-    // compatible transform (i.e. "__esModule" has not been set), then set
-    // "default" to the CommonJS "module.exports" for node compatibility.
-    isNodeMode || !mod || !mod.__esModule
-      ? __defProp(target, "default", { value: mod, enumerable: true })
-      : target,
-    mod,
-  )
-);
-var __toCommonJS = (mod) =>
-  __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var auth_exports = {};
 __export(auth_exports, {
   authenticateUser: () => authenticateUser,
-  default: () => auth_default,
+  default: () => auth_default
 });
 module.exports = __toCommonJS(auth_exports);
 var import_dotenv = __toESM(require("dotenv"));
@@ -57,7 +48,7 @@ function generateAccessToken(username) {
       (error, token) => {
         if (error) reject(error);
         else resolve(token);
-      },
+      }
     );
   });
 }
@@ -66,15 +57,11 @@ router.post("/register", (req, res) => {
   if (typeof username !== "string" || typeof password !== "string") {
     res.status(400).send("Bad request: Invalid input data.");
   } else {
-    import_credential_svc.default
-      .create(username, password)
-      .then((creds) => generateAccessToken(creds.username))
-      .then((token) => {
-        res.status(201).send({ token });
-      })
-      .catch((err) => {
-        res.status(409).send({ error: err.message });
-      });
+    import_credential_svc.default.create(username, password).then((creds) => generateAccessToken(creds.username)).then((token) => {
+      res.status(201).send({ token });
+    }).catch((err) => {
+      res.status(409).send({ error: err.message });
+    });
   }
 });
 router.post("/login", (req, res) => {
@@ -82,11 +69,7 @@ router.post("/login", (req, res) => {
   if (!username || !password) {
     res.status(400).send("Bad request: Invalid input data.");
   } else {
-    import_credential_svc.default
-      .verify(username, password)
-      .then((goodUser) => generateAccessToken(goodUser))
-      .then((token) => res.status(200).send({ token }))
-      .catch((error) => res.status(401).send("Unauthorized"));
+    import_credential_svc.default.verify(username, password).then((goodUser) => generateAccessToken(goodUser)).then((token) => res.status(200).send({ token })).catch((error) => res.status(401).send("Unauthorized"));
   }
 });
 function authenticateUser(req, res, next) {
@@ -95,19 +78,14 @@ function authenticateUser(req, res, next) {
   if (!token) {
     res.status(401).end();
   } else {
-    import_jsonwebtoken.default.verify(
-      token,
-      TOKEN_SECRET,
-      (error, decoded) => {
-        if (decoded) next();
-        else res.status(401).end();
-      },
-    );
+    import_jsonwebtoken.default.verify(token, TOKEN_SECRET, (error, decoded) => {
+      if (decoded) next();
+      else res.status(401).end();
+    });
   }
 }
 var auth_default = router;
 // Annotate the CommonJS export names for ESM import in node:
-0 &&
-  (module.exports = {
-    authenticateUser,
-  });
+0 && (module.exports = {
+  authenticateUser
+});
