@@ -19,53 +19,21 @@
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/tokens.css" />
     <link rel="stylesheet" href="./styles/page.css" />
-    <link rel="stylesheet" href="./styles/grid.css" />
-    <link rel="stylesheet" href="./styles/team.css" />
   </head>
   <body class="page">
     <mu-auth provides="blazing:auth">
       <header-element name="McLaren"></header-element>
-      <article class="team">
-        <figure>
-          <img
-            src="./images/2025mclarencarright.avif"
-            alt="Sideprofile of McLaren's 2025 car facing right."
-            width="400"
-          />
-        </figure>
-        <main>
-          <h2>Ranking:</h2>
-          <ul>
-            <li>WCC Position: 1</li>
-            <li>Current Points: 623</li>
-          </ul>
-          <h2>Drivers</h2>
-          <ul>
-            <li>
-              Oscar Piastri
-              <ul>
-                <li>Car Number: 81</li>
-                <li>Joined Team: 2023</li>
-              </ul>
-            </li>
-            <li>
-              Lando Norris
-              <ul>
-                <li>Car Number: 4</li>
-                <li>Joined Team: 2017</li>
-              </ul>
-            </li>
-          </ul>
-        </main>
-      </article>
+      <team-element src="./api/teams/McLaren"></team-element>
     </mu-auth>
     <script src="./scripts/darkmode.js"></script>
     <script type="module">
       import { define, Auth } from "@calpoly/mustang";
       import { HeaderElement } from "/src/header.js";
+      import { TeamElement } from "/src/team.js";
       define({
         "header-element": HeaderElement,
         "mu-auth": Auth.Provider,
+        "team-element": TeamElement,
       });
     </script>
   </body>

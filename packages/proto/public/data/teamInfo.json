@@ -1,0 +1,202 @@
+[
+  {
+    "teamName": "McLaren",
+    "imageSrc": "./images/2025mclarencarright.avif",
+    "ranking": {
+      "wccPosition": 1,
+      "currentPoints": 623
+    },
+    "drivers": [
+      {
+        "name": "Oscar Piastri",
+        "carNumber": 81,
+        "joinedTeam": 2023
+      },
+      {
+        "name": "Lando Norris",
+        "carNumber": 4,
+        "joinedTeam": 2017
+      }
+    ]
+  },
+  {
+    "teamName": "RedBull",
+    "imageSrc": "./images/2025redbullracingmaxver01right.avif",
+    "ranking": {
+      "wccPosition": 2,
+      "currentPoints": 546
+    },
+    "drivers": [
+      {
+        "name": "Max Verstappen",
+        "carNumber": 1,
+        "joinedTeam": 2016
+      },
+      {
+        "name": "Yuki Tsunoda",
+        "carNumber": 22,
+        "joinedTeam": 2024
+      }
+    ]
+  },
+  {
+    "teamName": "VCARB",
+    "imageSrc": "./images/2025racingbullsisahad01right.avif",
+    "ranking": {
+      "wccPosition": 3,
+      "currentPoints": 108
+    },
+    "drivers": [
+      {
+        "name": "Isack Hadjar",
+        "carNumber": 27,
+        "joinedTeam": 2025
+      },
+      {
+        "name": "Liam Lawson",
+        "carNumber": 30,
+        "joinedTeam": 2024
+      }
+    ]
+  },
+  {
+    "teamName": "Ferrari",
+    "imageSrc": "./images/2025ferrarichalec01right.avif",
+    "ranking": {
+      "wccPosition": 4,
+      "currentPoints": 454
+    },
+    "drivers": [
+      {
+        "name": "Charles Leclerc",
+        "carNumber": 16,
+        "joinedTeam": 2019
+      },
+      {
+        "name": "Lewis Hamilton",
+        "carNumber": 44,
+        "joinedTeam": 2025
+      }
+    ]
+  },
+  {
+    "teamName": "Mercedes",
+    "imageSrc": "./images/2025mercedesandant01right.avif",
+    "ranking": {
+      "wccPosition": 5,
+      "currentPoints": 410
+    },
+    "drivers": [
+      {
+        "name": "Andrew Shovlin",
+        "carNumber": 63,
+        "joinedTeam": 2025
+      },
+      {
+        "name": "George Russell",
+        "carNumber": 63,
+        "joinedTeam": 2022
+      }
+    ]
+  },
+  {
+    "teamName": "Williams",
+    "imageSrc": "./images/2025williamsalealb01right.avif",
+    "ranking": {
+      "wccPosition": 6,
+      "currentPoints": 35
+    },
+    "drivers": [
+      {
+        "name": "Alexander Albon",
+        "carNumber": 23,
+        "joinedTeam": 2022
+      },
+      {
+        "name": "Carlos Sainz",
+        "carNumber": 55,
+        "joinedTeam": 2025
+      }
+    ]
+  },
+  {
+    "teamName": "Aston Martin",
+    "imageSrc": "./images/2025astonmartinferalo01right.avif",
+    "ranking": {
+      "wccPosition": 7,
+      "currentPoints": 94
+    },
+    "drivers": [
+      {
+        "name": "Fernando Alonso",
+        "carNumber": 14,
+        "joinedTeam": 2023
+      },
+      {
+        "name": "Lance Stroll",
+        "carNumber": 18,
+        "joinedTeam": 2021
+      }
+    ]
+  },
+  {
+    "teamName": "Alpine",
+    "imageSrc": "./images/2025alpinefracol01right.avif",
+    "ranking": {
+      "wccPosition": 8,
+      "currentPoints": 11
+    },
+    "drivers": [
+      {
+        "name": "Pierre Gasly",
+        "carNumber": 10,
+        "joinedTeam": 2017
+      },
+      {
+        "name": "Jack Doohan",
+        "carNumber": 31,
+        "joinedTeam": 2025
+      }
+    ]
+  },
+  {
+    "teamName": "Sauber",
+    "imageSrc": "./images/2025kicksaubergabbor01right.avif",
+    "ranking": {
+      "wccPosition": 9,
+      "currentPoints": 0
+    },
+    "drivers": [
+      {
+        "name": "Gabriel Bortoleto",
+        "carNumber": 5,
+        "joinedTeam": 2025
+      },
+      {
+        "name": "Nico Hulkenberg",
+        "carNumber": 27,
+        "joinedTeam": 2025
+      }
+    ]
+  },
+  {
+    "teamName": "Haas",
+    "imageSrc": "./images/2025haasestoco01right.avif",
+    "ranking": {
+      "wccPosition": 10,
+      "currentPoints": 8
+    },
+    "drivers": [
+      {
+        "name": "Esteban Ocon",
+        "carNumber": 31,
+        "joinedTeam": 2025
+      },
+      {
+        "name": "Ollie Bearman",
+        "carNumber": 20,
+        "joinedTeam": 2025
+      }
+    ]
+  }
+]

@@ -19,61 +19,21 @@
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/tokens.css" />
     <link rel="stylesheet" href="./styles/page.css" />
-    <link rel="stylesheet" href="./styles/grid.css" />
-    <link rel="stylesheet" href="./styles/track.css" />
   </head>
   <body class="page">
     <mu-auth provides="blazing:auth">
       <header-element name="Australia"></header-element>
-      <article class="track">
-        <h2>Melbourne</h2>
-        <main>
-          <div>
-            <h2>Details:</h2>
-            <ul>
-              <li>DRS Zones: 2</li>
-              <li>Turns: 14</li>
-              <li>
-                Tire Compounds Available:
-                <ol>
-                  <li>C3 (Hard)</li>
-                  <li>C4 (Medium)</li>
-                  <li>C5 (Soft)</li>
-                </ol>
-              </li>
-              <li>First GP: 1996</li>
-              <li>Circuit Length: 5.303km</li>
-              <li>Number of laps: 58</li>
-              <li>Race Distance: 307.574km</li>
-              <li>
-                <ul>
-                  Lap Record:
-                  <li>1:24.125</li>
-                  <li>M Schumacher (2004)</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <figure>
-            <img
-              src="./images/Australia_Circuit.jpg"
-              alt="Image of Australian Grand Prix Circuit"
-              width="400"
-            />
-            <figcaption>
-              Albert Park Circuit, Melbourne - Host of the Australian Grand Prix
-            </figcaption>
-          </figure>
-        </main>
-      </article>
+      <track-element src="/api/tracks/Australia"></track-element>
     </mu-auth>
     <script src="./scripts/darkmode.js"></script>
     <script type="module">
       import { define, Auth } from "@calpoly/mustang";
       import { HeaderElement } from "/src/header.js";
+      import { TrackElement } from "/src/track.js";
       define({
         "header-element": HeaderElement,
         "mu-auth": Auth.Provider,
+        "track-element": TrackElement,
       });
     </script>
   </body>

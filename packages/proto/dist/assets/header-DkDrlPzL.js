@@ -1,4 +1,27 @@
-import{i as h,O as g,x as s,r as p,a as u,e as f,n as v,b as d}from"./reset.css-DFjQgTct.js";var b=Object.defineProperty,n=(l,e,t,x)=>{for(var i=void 0,o=l.length-1,c;o>=0;o--)(c=l[o])&&(i=c(e,t,i)||i);return i&&b(e,t,i),i};const a=class a extends h{constructor(){super(...arguments),this.loggedIn=!1,this._authObserver=new g(this,"blazing:auth")}render(){return s`
+import {
+  i as h,
+  O as g,
+  x as s,
+  r as p,
+  a as u,
+  e as f,
+  n as v,
+  b as d,
+} from "./reset.css-DFjQgTct.js";
+var b = Object.defineProperty,
+  n = (l, e, t, x) => {
+    for (var i = void 0, o = l.length - 1, c; o >= 0; o--)
+      (c = l[o]) && (i = c(e, t, i) || i);
+    return (i && b(e, t, i), i);
+  };
+const a = class a extends h {
+  constructor() {
+    (super(...arguments),
+      (this.loggedIn = !1),
+      (this._authObserver = new g(this, "blazing:auth")));
+  }
+  render() {
+    return s`
       <header>
         <h1><a href="./index.html">${this.name}</a></h1>
         <div class="welcome-section">
@@ -6,7 +29,7 @@ import{i as h,O as g,x as s,r as p,a as u,e as f,n as v,b as d}from"./reset.css-
             <svg class="helmet-icon">
               <use href="./icons/utilities.svg#helmet-utility" />
             </svg>
-            <div>Hello ${this.userid||"Racer"}</div>
+            <div>Hello ${this.userid || "Racer"}</div>
           </div>
           <div class="button-group">
             <label class="switch" onchange="toggleDM(event)">
@@ -16,22 +39,50 @@ import{i as h,O as g,x as s,r as p,a as u,e as f,n as v,b as d}from"./reset.css-
               </svg>
               <span class="slider"></span>
             </label>
-            ${this.loggedIn?this.renderSignOutButton():this.renderSignInButton()}
+            ${this.loggedIn ? this.renderSignOutButton() : this.renderSignInButton()}
           </div>
         </div>
       </header>
-    `}renderSignOutButton(){return s`
+    `;
+  }
+  renderSignOutButton() {
+    return s`
       <button
         class="sign-btn"
-        @click=${e=>{f.relay(e,"auth:message",["auth/signout"]),setTimeout(()=>location.reload(),500)}}
+        @click=${(e) => {
+          (f.relay(e, "auth:message", ["auth/signout"]),
+            setTimeout(() => location.reload(), 500));
+        }}
       >
         Sign Out
       </button>
-    `}renderSignInButton(){return s`
+    `;
+  }
+  renderSignInButton() {
+    return s`
       <button class="sign-btn" onclick="location.href='/login.html';">
         Sign In
       </button>
-    `}connectedCallback(){super.connectedCallback(),this._authObserver.observe(e=>{const{user:t}=e;t&&t.authenticated?(this.loggedIn=!0,this.userid=t.username):(this.loggedIn=!1,this.userid=void 0)})}updated(){const e=this.shadowRoot?.querySelector("#theme-toggle"),t=localStorage.getItem("darkMode")==="true";e&&(e.checked=t)}};a.styles=[p.styles,u`
+    `;
+  }
+  connectedCallback() {
+    (super.connectedCallback(),
+      this._authObserver.observe((e) => {
+        const { user: t } = e;
+        t && t.authenticated
+          ? ((this.loggedIn = !0), (this.userid = t.username))
+          : ((this.loggedIn = !1), (this.userid = void 0));
+      }));
+  }
+  updated() {
+    const e = this.shadowRoot?.querySelector("#theme-toggle"),
+      t = localStorage.getItem("darkMode") === "true";
+    e && (e.checked = t);
+  }
+};
+a.styles = [
+  p.styles,
+  u`
       header {
         display: flex;
         align-items: center;
@@ -167,4 +218,10 @@ import{i as h,O as g,x as s,r as p,a as u,e as f,n as v,b as d}from"./reset.css-
       .sign-btn:hover {
         opacity: 0.8;
       }
-    `];let r=a;n([v()],r.prototype,"name");n([d()],r.prototype,"loggedIn");n([d()],r.prototype,"userid");export{r as H};
+    `,
+];
+let r = a;
+n([v()], r.prototype, "name");
+n([d()], r.prototype, "loggedIn");
+n([d()], r.prototype, "userid");
+export { r as H };

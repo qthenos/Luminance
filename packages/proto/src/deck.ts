@@ -18,6 +18,9 @@ export class DeckElement extends LitElement {
 
   render() {
     const { cards } = this;
+    const sortedCards = [...cards].sort(
+      (a, b) => a.orderNumber - b.orderNumber,
+    );
 
     function renderCard(c: Card) {
       if (c.backImg) {
@@ -51,7 +54,7 @@ export class DeckElement extends LitElement {
       }
     }
 
-    return html` ${cards.map(renderCard)} `;
+    return html` ${sortedCards.map(renderCard)} `;
   }
 
   static styles = [

@@ -1,0 +1,482 @@
+[
+  {
+    "trackName": "Australia",
+    "cityName": "Melbourne",
+    "drsZones": 2,
+    "turns": 14,
+    "tireCompounds": ["C3 (Hard)", "C4 (Medium)", "C5 (Soft)"],
+    "firstGP": 1996,
+    "circuitLen": "5.303km",
+    "numLaps": 58,
+    "raceDistance": "307.574km",
+    "lapRecord": {
+      "time": "1:24.125",
+      "driver": "M. Schumacher",
+      "year": 2004
+    },
+    "figure": {
+      "src": "./images/australia-circuit.jpg",
+      "caption": "Albert Park Circuit, Melbourne - Host of the Australian Grand Prix"
+    }
+  },
+  {
+    "trackName": "China",
+    "cityName": "Shanghai",
+    "drsZones": 3,
+    "turns": 16,
+    "tireCompounds": ["C2 (Hard)", "C3 (Medium)", "C4 (Soft)"],
+    "firstGP": 2004,
+    "circuitLen": "5.451km",
+    "numLaps": 56,
+    "raceDistance": "305.066km",
+    "lapRecord": {
+      "time": "1:32.238",
+      "driver": "L. Hamilton",
+      "year": 2018
+    },
+    "figure": {
+      "src": "./images/china-circuit.jpg",
+      "caption": "Shanghai International Circuit - Host of the Chinese Grand Prix"
+    }
+  },
+  {
+    "trackName": "Japan",
+    "cityName": "Suzuka",
+    "drsZones": 3,
+    "turns": 18,
+    "tireCompounds": ["C3 (Hard)", "C4 (Medium)", "C5 (Soft)"],
+    "firstGP": 1976,
+    "circuitLen": "5.807km",
+    "numLaps": 53,
+    "raceDistance": "307.471km",
+    "lapRecord": {
+      "time": "1:30.983",
+      "driver": "M. Verstappen",
+      "year": 2022
+    },
+    "figure": {
+      "src": "./images/japan-circuit.jpg",
+      "caption": "Suzuka International Racing Course - Host of the Japanese Grand Prix"
+    }
+  },
+  {
+    "trackName": "Bahrain",
+    "cityName": "Sakhir",
+    "drsZones": 3,
+    "turns": 15,
+    "tireCompounds": ["C2 (Hard)", "C3 (Medium)", "C4 (Soft)"],
+    "firstGP": 2004,
+    "circuitLen": "5.412km",
+    "numLaps": 57,
+    "raceDistance": "308.238km",
+    "lapRecord": {
+      "time": "1:31.447",
+      "driver": "M. Verstappen",
+      "year": 2024
+    },
+    "figure": {
+      "src": "./images/bahrain-circuit.jpg",
+      "caption": "Bahrain International Circuit - Host of the Bahrain Grand Prix"
+    }
+  },
+  {
+    "trackName": "Saudi Arabia",
+    "cityName": "Jeddah",
+    "drsZones": 4,
+    "turns": 27,
+    "tireCompounds": ["C1 (Hard)", "C2 (Medium)", "C3 (Soft)"],
+    "firstGP": 2021,
+    "circuitLen": "6.174km",
+    "numLaps": 50,
+    "raceDistance": "308.45km",
+    "lapRecord": {
+      "time": "1:30.734",
+      "driver": "L. Hamilton",
+      "year": 2021
+    },
+    "figure": {
+      "src": "./images/saudi-arabia-circuit.jpg",
+      "caption": "Jeddah Corniche Circuit - Host of the Saudi Arabian Grand Prix"
+    }
+  },
+  {
+    "trackName": "USA - Miami",
+    "cityName": "Miami",
+    "drsZones": 3,
+    "turns": 19,
+    "tireCompounds": ["C2 (Hard)", "C3 (Medium)", "C4 (Soft)"],
+    "firstGP": 2022,
+    "circuitLen": "5.412km",
+    "numLaps": 57,
+    "raceDistance": "308.326km",
+    "lapRecord": {
+      "time": "1:29.708",
+      "driver": "M. Verstappen",
+      "year": 2023
+    },
+    "figure": {
+      "src": "./images/miami-circuit.jpg",
+      "caption": "Miami International Autodrome - Host of the Miami Grand Prix"
+    }
+  },
+  {
+    "trackName": "Italy - Imola",
+    "cityName": "Imola",
+    "drsZones": 2,
+    "turns": 19,
+    "tireCompounds": ["C3 (Hard)", "C4 (Medium)", "C5 (Soft)"],
+    "firstGP": 1994,
+    "circuitLen": "4.909km",
+    "numLaps": 63,
+    "raceDistance": "309.049km",
+    "lapRecord": {
+      "time": "1:17.377",
+      "driver": "M. Verstappen",
+      "year": 2024
+    },
+    "figure": {
+      "src": "./images/imola-circuit.jpg",
+      "caption": "Autodromo Enzo e Dino Ferrari - Host of the Emilia-Romagna Grand Prix"
+    }
+  },
+  {
+    "trackName": "Monaco",
+    "cityName": "Monte Carlo",
+    "drsZones": 1,
+    "turns": 19,
+    "tireCompounds": ["C3 (Hard)", "C4 (Medium)", "C5 (Soft)"],
+    "firstGP": 1950,
+    "circuitLen": "3.337km",
+    "numLaps": 78,
+    "raceDistance": "260.286km",
+    "lapRecord": {
+      "time": "1:12.909",
+      "driver": "M. Verstappen",
+      "year": 2023
+    },
+    "figure": {
+      "src": "./images/monaco-circuit.jpg",
+      "caption": "Circuit de Monaco - Host of the Monaco Grand Prix"
+    }
+  },
+  {
+    "trackName": "Spain",
+    "cityName": "Barcelona",
+    "drsZones": 3,
+    "turns": 16,
+    "tireCompounds": ["C2 (Hard)", "C3 (Medium)", "C4 (Soft)"],
+    "firstGP": 1991,
+    "circuitLen": "4.657km",
+    "numLaps": 66,
+    "raceDistance": "307.362km",
+    "lapRecord": {
+      "time": "1:18.149",
+      "driver": "M. Verstappen",
+      "year": 2024
+    },
+    "figure": {
+      "src": "./images/spain-circuit.jpg",
+      "caption": "Circuit de Barcelona-Catalunya - Host of the Spanish Grand Prix"
+    }
+  },
+  {
+    "trackName": "Canada",
+    "cityName": "Montreal",
+    "drsZones": 3,
+    "turns": 15,
+    "tireCompounds": ["C2 (Hard)", "C3 (Medium)", "C4 (Soft)"],
+    "firstGP": 1986,
+    "circuitLen": "4.361km",
+    "numLaps": 70,
+    "raceDistance": "305.27km",
+    "lapRecord": {
+      "time": "1:13.078",
+      "driver": "L. Hamilton",
+      "year": 2017
+    },
+    "figure": {
+      "src": "./images/canada-circuit.jpg",
+      "caption": "Circuit Gilles Villeneuve - Host of the Canadian Grand Prix"
+    }
+  },
+  {
+    "trackName": "Austria",
+    "cityName": "Spielberg",
+    "drsZones": 3,
+    "turns": 10,
+    "tireCompounds": ["C1 (Hard)", "C2 (Medium)", "C3 (Soft)"],
+    "firstGP": 1997,
+    "circuitLen": "4.318km",
+    "numLaps": 71,
+    "raceDistance": "306.578km",
+    "lapRecord": {
+      "time": "1:05.619",
+      "driver": "M. Verstappen",
+      "year": 2023
+    },
+    "figure": {
+      "src": "./images/austria-circuit.jpg",
+      "caption": "Red Bull Ring - Host of the Austrian Grand Prix"
+    }
+  },
+  {
+    "trackName": "England",
+    "cityName": "Silverstone",
+    "drsZones": 3,
+    "turns": 18,
+    "tireCompounds": ["C1 (Hard)", "C2 (Medium)", "C3 (Soft)"],
+    "firstGP": 1950,
+    "circuitLen": "5.891km",
+    "numLaps": 52,
+    "raceDistance": "306.198km",
+    "lapRecord": {
+      "time": "1:27.097",
+      "driver": "L. Hamilton",
+      "year": 2020
+    },
+    "figure": {
+      "src": "./images/england-circuit.jpg",
+      "caption": "Silverstone Circuit - Host of the British Grand Prix"
+    }
+  },
+  {
+    "trackName": "Belgium",
+    "cityName": "Spa",
+    "drsZones": 3,
+    "turns": 19,
+    "tireCompounds": ["C1 (Hard)", "C2 (Medium)", "C3 (Soft)"],
+    "firstGP": 1950,
+    "circuitLen": "7.004km",
+    "numLaps": 44,
+    "raceDistance": "308.052km",
+    "lapRecord": {
+      "time": "1:46.286",
+      "driver": "L. Hamilton",
+      "year": 2020
+    },
+    "figure": {
+      "src": "./images/belgium-circuit.jpg",
+      "caption": "Circuit de Spa-Francorchamps - Host of the Belgian Grand Prix"
+    }
+  },
+  {
+    "trackName": "Hungary",
+    "cityName": "Budapest",
+    "drsZones": 2,
+    "turns": 14,
+    "tireCompounds": ["C4 (Hard)", "C5 (Medium)", "C5+ (Soft)"],
+    "firstGP": 1986,
+    "circuitLen": "4.381km",
+    "numLaps": 70,
+    "raceDistance": "306.63km",
+    "lapRecord": {
+      "time": "1:16.627",
+      "driver": "L. Hamilton",
+      "year": 2020
+    },
+    "figure": {
+      "src": "./images/hungary-circuit.jpg",
+      "caption": "Hungaroring - Host of the Hungarian Grand Prix"
+    }
+  },
+  {
+    "trackName": "Netherlands",
+    "cityName": "Zandvoort",
+    "drsZones": 3,
+    "turns": 14,
+    "tireCompounds": ["C2 (Hard)", "C3 (Medium)", "C4 (Soft)"],
+    "firstGP": 1985,
+    "circuitLen": "4.259km",
+    "numLaps": 72,
+    "raceDistance": "306.587km",
+    "lapRecord": {
+      "time": "1:11.097",
+      "driver": "M. Verstappen",
+      "year": 2023
+    },
+    "figure": {
+      "src": "./images/netherlands-circuit.jpg",
+      "caption": "Circuit Zandvoort - Host of the Dutch Grand Prix"
+    }
+  },
+  {
+    "trackName": "Italy - Monza",
+    "cityName": "Monza",
+    "drsZones": 4,
+    "turns": 11,
+    "tireCompounds": ["C1 (Hard)", "C2 (Medium)", "C3 (Soft)"],
+    "firstGP": 1950,
+    "circuitLen": "5.793km",
+    "numLaps": 53,
+    "raceDistance": "306.720km",
+    "lapRecord": {
+      "time": "1:21.046",
+      "driver": "M. Verstappen",
+      "year": 2024
+    },
+    "figure": {
+      "src": "./images/monza-circuit.jpg",
+      "caption": "Autodromo Nazionale di Monza - Host of the Italian Grand Prix"
+    }
+  },
+  {
+    "trackName": "Azerbaijan",
+    "cityName": "Baku",
+    "drsZones": 3,
+    "turns": 20,
+    "tireCompounds": ["C2 (Hard)", "C3 (Medium)", "C4 (Soft)"],
+    "firstGP": 2016,
+    "circuitLen": "6.003km",
+    "numLaps": 51,
+    "raceDistance": "306.049km",
+    "lapRecord": {
+      "time": "1:43.009",
+      "driver": "M. Verstappen",
+      "year": 2023
+    },
+    "figure": {
+      "src": "./images/azerbaijan-circuit.jpg",
+      "caption": "Baku City Circuit - Host of the Azerbaijan Grand Prix"
+    }
+  },
+  {
+    "trackName": "Singapore",
+    "cityName": "Singapore",
+    "drsZones": 2,
+    "turns": 23,
+    "tireCompounds": ["C3 (Hard)", "C4 (Medium)", "C5 (Soft)"],
+    "firstGP": 2008,
+    "circuitLen": "5.065km",
+    "numLaps": 61,
+    "raceDistance": "308.957km",
+    "lapRecord": {
+      "time": "1:41.905",
+      "driver": "L. Hamilton",
+      "year": 2023
+    },
+    "figure": {
+      "src": "./images/singapore-circuit.jpg",
+      "caption": "Marina Bay Street Circuit - Host of the Singapore Grand Prix"
+    }
+  },
+  {
+    "trackName": "USA - Austin",
+    "cityName": "Austin",
+    "drsZones": 3,
+    "turns": 20,
+    "tireCompounds": ["C2 (Hard)", "C3 (Medium)", "C4 (Soft)"],
+    "firstGP": 2012,
+    "circuitLen": "5.513km",
+    "numLaps": 56,
+    "raceDistance": "308.405km",
+    "lapRecord": {
+      "time": "1:36.169",
+      "driver": "M. Verstappen",
+      "year": 2022
+    },
+    "figure": {
+      "src": "./images/austin-circuit.jpg",
+      "caption": "Circuit of The Americas - Host of the United States Grand Prix"
+    }
+  },
+  {
+    "trackName": "Mexico",
+    "cityName": "Mexico City",
+    "drsZones": 3,
+    "turns": 17,
+    "tireCompounds": ["C2 (Hard)", "C3 (Medium)", "C4 (Soft)"],
+    "firstGP": 1963,
+    "circuitLen": "4.304km",
+    "numLaps": 71,
+    "raceDistance": "305.354km",
+    "lapRecord": {
+      "time": "1:17.774",
+      "driver": "M. Verstappen",
+      "year": 2022
+    },
+    "figure": {
+      "src": "./images/mexico-circuit.jpg",
+      "caption": "Autodromo Hermanos Rodriguez - Host of the Mexico City Grand Prix"
+    }
+  },
+  {
+    "trackName": "Brazil",
+    "cityName": "Sao Paulo",
+    "drsZones": 3,
+    "turns": 15,
+    "tireCompounds": ["C3 (Hard)", "C4 (Medium)", "C5 (Soft)"],
+    "firstGP": 1973,
+    "circuitLen": "4.309km",
+    "numLaps": 71,
+    "raceDistance": "305.879km",
+    "lapRecord": {
+      "time": "1:17.052",
+      "driver": "G. Russell",
+      "year": 2022
+    },
+    "figure": {
+      "src": "./images/brazil-circuit.jpg",
+      "caption": "Autodromo Jose Carlos Pace - Host of the Brazilian Grand Prix"
+    }
+  },
+  {
+    "trackName": "USA - Vegas",
+    "cityName": "Las Vegas",
+    "drsZones": 4,
+    "turns": 17,
+    "tireCompounds": ["C2 (Hard)", "C3 (Medium)", "C4 (Soft)"],
+    "firstGP": 2023,
+    "circuitLen": "6.120km",
+    "numLaps": 50,
+    "raceDistance": "306.0km",
+    "lapRecord": {
+      "time": "1:35.681",
+      "driver": "M. Verstappen",
+      "year": 2023
+    },
+    "figure": {
+      "src": "./images/vegas-circuit.jpg",
+      "caption": "Las Vegas Street Circuit - Host of the Las Vegas Grand Prix"
+    }
+  },
+  {
+    "trackName": "Qatar",
+    "cityName": "Doha",
+    "drsZones": 3,
+    "turns": 16,
+    "tireCompounds": ["C2 (Hard)", "C3 (Medium)", "C4 (Soft)"],
+    "firstGP": 2021,
+    "circuitLen": "5.419km",
+    "numLaps": 57,
+    "raceDistance": "308.238km",
+    "lapRecord": {
+      "time": "1:24.319",
+      "driver": "L. Hamilton",
+      "year": 2021
+    },
+    "figure": {
+      "src": "./images/qatar-circuit.jpg",
+      "caption": "Lusail International Circuit - Host of the Qatar Grand Prix"
+    }
+  },
+  {
+    "trackName": "Abu Dhabi",
+    "cityName": "Abu Dhabi",
+    "drsZones": 4,
+    "turns": 21,
+    "tireCompounds": ["C2 (Hard)", "C3 (Medium)", "C4 (Soft)"],
+    "firstGP": 2009,
+    "circuitLen": "5.281km",
+    "numLaps": 58,
+    "raceDistance": "306.183km",
+    "lapRecord": {
+      "time": "1:26.103",
+      "driver": "M. Verstappen",
+      "year": 2023
+    },
+    "figure": {
+      "src": "./images/abu-dhabi-circuit.jpg",
+      "caption": "Yas Marina Circuit - Host of the Abu Dhabi Grand Prix"
+    }
+  }
+]
