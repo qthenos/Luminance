@@ -23,6 +23,11 @@
   <body class="page">
     <mu-auth provides="blazing:auth">
       <header-element name="Favorites"></header-element>
+      <article class="grid">
+        <main>
+          <favorites-element></favorites-element>
+        </main>
+      </article>
     </mu-auth>
     <script src="./scripts/darkmode.js"></script>
     <script type="module">
@@ -30,10 +35,12 @@
       import { CardElement } from "/src/card.js";
       import { DeckElement } from "/src/deck.js";
       import { HeaderElement } from "/src/header.js";
+      import { FavoritesElement } from "/src/favorites.js";
       define({
         "card-element": CardElement,
         "deck-element": DeckElement,
         "header-element": HeaderElement,
+        "favorites-element": FavoritesElement,
         "mu-auth": Auth.Provider,
       });
     </script>

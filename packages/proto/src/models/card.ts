@@ -1,4 +1,5 @@
 export interface Card {
+  _id?: string;
   link: string;
   label: string;
   icon: string;

@@ -1,0 +1,83 @@
+"use strict";
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var profile_svc_exports = {};
+__export(profile_svc_exports, {
+  default: () => profile_svc_default
+});
+module.exports = __toCommonJS(profile_svc_exports);
+var import_mongoose = require("mongoose");
+const ProfileSchema = new import_mongoose.Schema(
+  {
+    userid: { type: String, required: true, trim: true },
+    favoriteCards: [{ type: import_mongoose.Schema.Types.ObjectId, ref: "Card" }],
+    avatar: String
+  },
+  { collection: "lum-profiles" }
+);
+const ProfileModel = (0, import_mongoose.model)("Profile", ProfileSchema);
+function index() {
+  return ProfileModel.find();
+}
+function get(userid) {
+  return ProfileModel.find({ userid }).then((list) => list[0]).catch(() => {
+    throw `${userid} Not Found`;
+  });
+}
+function getFavorites(userid) {
+  return ProfileModel.findOne({ userid }).populate("favoriteCards").then((found) => {
+    if (!found) throw `${userid} Not Found`;
+    return found?.favoriteCards || [];
+  });
+}
+function update(userid, profile) {
+  return ProfileModel.findOne({ userid }).then((found) => {
+    if (!found) throw `${userid} Not Found`;
+    else
+      return ProfileModel.findByIdAndUpdate(
+        found._id,
+        profile,
+        {
+          new: true
+        }
+      );
+  }).then((updated) => {
+    if (!updated) throw `${userid} not updated`;
+    else return updated;
+  });
+}
+function addFavorite(userid, cardId) {
+  return ProfileModel.findOne({ userid }).then((found) => {
+    if (!found) throw `${userid} Not Found`;
+    if (!found.favoriteCards.includes(cardId)) {
+      found.favoriteCards.push(cardId);
+      return found.save();
+    }
+    return found;
+  });
+}
+function removeFavorite(userid, cardId) {
+  return ProfileModel.findOne({ userid }).then((found) => {
+    if (!found) throw `${userid} Not Found`;
+    found.favoriteCards = found.favoriteCards.filter(
+      (id) => id.toString() !== cardId
+    );
+    return found.save();
+  });
+}
+var profile_svc_default = { index, get, getFavorites, update, addFavorite, removeFavorite };

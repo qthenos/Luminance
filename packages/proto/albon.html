@@ -22,7 +22,7 @@
   </head>
   <body class="page">
     <mu-auth provides="blazing:auth">
-      <header-element name="Alexander Albon"></header-element>
+      <header-element name="Alexander Albon" identifier=""></header-element>
       <driver-element src="/api/drivers/23"></driver-element>
     </mu-auth>
     <script src="./scripts/darkmode.js"></script>
@@ -35,6 +35,14 @@
         "mu-auth": Auth.Provider,
         "driver-element": DriverElement,
       });
+
+      // Get cardId from URL query parameter and set it as identifier
+      const params = new URLSearchParams(window.location.search);
+      const cardId = params.get("cardId");
+      if (cardId) {
+        const headerElement = document.querySelector("header-element");
+        headerElement.setAttribute("identifier", cardId);
+      }
     </script>
   </body>
 </html>

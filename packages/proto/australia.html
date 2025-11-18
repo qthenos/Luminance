@@ -22,7 +22,7 @@
   </head>
   <body class="page">
     <mu-auth provides="blazing:auth">
-      <header-element name="Australia"></header-element>
+      <header-element name="Australia" identifier=""></header-element>
       <track-element src="/api/tracks/Australia"></track-element>
     </mu-auth>
     <script src="./scripts/darkmode.js"></script>
@@ -35,6 +35,14 @@
         "mu-auth": Auth.Provider,
         "track-element": TrackElement,
       });
+
+      // Get cardId from URL query parameter and set it as identifier
+      const params = new URLSearchParams(window.location.search);
+      const cardId = params.get("cardId");
+      if (cardId) {
+        const headerElement = document.querySelector("header-element");
+        headerElement.setAttribute("identifier", cardId);
+      }
     </script>
   </body>
 </html>

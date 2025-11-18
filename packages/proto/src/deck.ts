@@ -29,6 +29,7 @@ export class DeckElement extends LitElement {
             href="${c.link}"
             label="${c.label}"
             backgroundImg="${c.backImg}"
+            cardId="${c._id}"
           ></card-element>
         `;
       } else if (c.img) {
@@ -37,6 +38,7 @@ export class DeckElement extends LitElement {
             href="${c.link}"
             label="${c.label}"
             img="${c.img}"
+            cardId="${c._id}"
           ></card-element>
         `;
       } else if (c.icon) {
@@ -45,11 +47,12 @@ export class DeckElement extends LitElement {
             href="${c.link}"
             label="${c.label}"
             icon="${c.icon}"
+            cardId="${c._id}"
           ></card-element>
         `;
       } else {
         return html`
-          <card-element href="${c.link}" label="${c.label}"></card-element>
+          <card-element href="${c.link}" label="${c.label}" cardId="${c._id}"></card-element>
         `;
       }
     }

@@ -5,6 +5,7 @@ import cards from "./routes/cards";
 import tracks from "./routes/tracks";
 import teams from "./routes/teams";
 import drivers from "./routes/drivers";
+import profiles from "./routes/profiles";
 import auth, { authenticateUser } from "./routes/auth";
 
 connect("LuminarDB");
@@ -20,6 +21,7 @@ app.use("/api/cards", authenticateUser, cards);
 app.use("/api/tracks", authenticateUser, tracks);
 app.use("/api/teams", authenticateUser, teams);
 app.use("/api/drivers", authenticateUser, drivers);
+app.use("/api/profiles", authenticateUser, profiles);
 app.use("/auth", auth);
 
 app.get("/hello", (req: Request, res: Response) => {

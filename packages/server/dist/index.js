@@ -27,6 +27,7 @@ var import_cards = __toESM(require("./routes/cards"));
 var import_tracks = __toESM(require("./routes/tracks"));
 var import_teams = __toESM(require("./routes/teams"));
 var import_drivers = __toESM(require("./routes/drivers"));
+var import_profiles = __toESM(require("./routes/profiles"));
 var import_auth = __toESM(require("./routes/auth"));
 (0, import_mongo.connect)("LuminarDB");
 const app = (0, import_express.default)();
@@ -38,6 +39,7 @@ app.use("/api/cards", import_auth.authenticateUser, import_cards.default);
 app.use("/api/tracks", import_auth.authenticateUser, import_tracks.default);
 app.use("/api/teams", import_auth.authenticateUser, import_teams.default);
 app.use("/api/drivers", import_auth.authenticateUser, import_drivers.default);
+app.use("/api/profiles", import_auth.authenticateUser, import_profiles.default);
 app.use("/auth", import_auth.default);
 app.get("/hello", (req, res) => {
   res.send("Hello world!");

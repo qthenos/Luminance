@@ -10,6 +10,7 @@ const CardSchema = new Schema<Card>(
     img: { type: String, trim: true },
     backImg: { type: String, trim: true },
     category: { type: String, trim: true },
+    orderNumber: { type: Number, default: 0 },
   },
   { collection: "lum-cards" },
 );

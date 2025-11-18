@@ -21,31 +21,40 @@ export class CardElement extends LitElement {
   @property()
   category?: string;
 
+  @property()
+  cardId?: string;
+
+  private getHrefWithCardId(): string {
+    if (!this.href) return "";
+    const separator = this.href.includes("?") ? "&" : "?";
+    return this.cardId ? `${this.href}${separator}cardId=${this.cardId}` : this.href;
+  }
+
   override render() {
     if (this.backgroundImg) {
       return html`
         <div class="card" style="background-image: url(${this.backgroundImg});">
-          <a href="${this.href}">${this.label}</a>
+          <a href="${this.getHrefWithCardId()}">${this.label}</a>
         </div>
       `;
     } else if (this.img) {
       return html`
         <div class="card">
-          <a href="${this.href}">${this.label}</a>
+          <a href="${this.getHrefWithCardId()}">${this.label}</a>
           <img src="${this.img}" />
         </div>
       `;
     } else if (this.icon) {
       return html`
         <div class="card">
-          <a href="${this.href}">${this.label}</a>
+          <a href="${this.getHrefWithCardId()}">${this.label}</a>
           <svg class="icon"><use href="${this.icon}" /></svg>
         </div>
       `;
     } else {
       return html`
         <div class="card">
-          <a href="${this.href}">${this.label}</a>
+          <a href="${this.getHrefWithCardId()}">${this.label}</a>
         </div>
       `;
     }

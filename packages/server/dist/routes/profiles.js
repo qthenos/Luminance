@@ -26,36 +26,36 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-var cards_copy_exports = {};
-__export(cards_copy_exports, {
-  default: () => cards_copy_default
+var profiles_exports = {};
+__export(profiles_exports, {
+  default: () => profiles_default
 });
-module.exports = __toCommonJS(cards_copy_exports);
+module.exports = __toCommonJS(profiles_exports);
 var import_express = __toESM(require("express"));
-var import_card_svc = __toESM(require("../services/card-svc"));
+var import_profile_svc = __toESM(require("../services/profile-svc"));
 const router = import_express.default.Router();
 router.get("/", (_, res) => {
-  import_card_svc.default.index().then((list) => res.json(list)).catch((err) => res.status(500).send(err));
+  import_profile_svc.default.index().then((list) => res.json(list)).catch((err) => res.status(500).send(err));
 });
-router.get("/category/:category", (req, res) => {
-  const { category } = req.params;
-  import_card_svc.default.getByCategory(category).then((cards) => res.json(cards)).catch((err) => res.status(404).send(err));
+router.get("/:userID", (req, res) => {
+  const { userID } = req.params;
+  import_profile_svc.default.get(userID).then((card) => res.json(card)).catch((err) => res.status(404).send(err));
 });
-router.get("/:label", (req, res) => {
-  const { label } = req.params;
-  import_card_svc.default.get(label).then((card) => res.json(card)).catch((err) => res.status(404).send(err));
+router.put("/:userID", (req, res) => {
+  const { userID } = req.params;
+  const newProfile = req.body;
+  import_profile_svc.default.update(userID, newProfile).then((card) => res.json(card)).catch((err) => res.status(404).end());
 });
-router.post("/", (req, res) => {
-  const newCard = req.body;
-  import_card_svc.default.create(newCard).then((card) => res.status(201).json(card)).catch((err) => res.status(500).send(err));
+router.get("/:userID/favorites", (req, res) => {
+  const { userID } = req.params;
+  import_profile_svc.default.getFavorites(userID).then((cards) => res.json(cards)).catch((err) => res.status(404).send(err));
 });
-router.put("/:label", (req, res) => {
-  const { label } = req.params;
-  const newCard = req.body;
-  import_card_svc.default.update(label, newCard).then((card) => res.json(card)).catch((err) => res.status(404).end());
+router.post("/:userID/favorites/:cardID", (req, res) => {
+  const { userID, cardID } = req.params;
+  import_profile_svc.default.addFavorite(userID, cardID).then((profile) => res.json(profile)).catch((err) => res.status(404).send(err));
 });
-router.delete("/:label", (req, res) => {
-  const { label } = req.params;
-  import_card_svc.default.remove(label).then(() => res.status(204).end()).catch((err) => res.status(404).send(err));
+router.delete("/:userID/favorites/:cardID", (req, res) => {
+  const { userID, cardID } = req.params;
+  import_profile_svc.default.removeFavorite(userID, cardID).then((profile) => res.json(profile)).catch((err) => res.status(404).send(err));
 });
-var cards_copy_default = router;
+var profiles_default = router;
