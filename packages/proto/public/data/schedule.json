@@ -1,170 +1,170 @@
 [
   {
     "orderNumber": 1,
-    "link": "./australia.html",
+    "link": "/app/schedule/Australia",
     "label": "Australia",
-    "icon": "./icons/circuits.svg#melbourne-circuit",
+    "icon": "/icons/circuits.svg#melbourne-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 2,
-    "link": "",
+    "link": "/app/schedule/China",
     "label": "China",
-    "icon": "./icons/circuits.svg#shanghai-circuit",
+    "icon": "/icons/circuits.svg#shanghai-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 3,
-    "link": "",
+    "link": "/app/schedule/Japan",
     "label": "Japan",
-    "icon": "./icons/circuits.svg#suzuka-circuit",
+    "icon": "/icons/circuits.svg#suzuka-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 4,
-    "link": "",
+    "link": "/app/schedule/Bahrain",
     "label": "Bahrain",
-    "icon": "./icons/circuits.svg#sakhir-circuit",
+    "icon": "/icons/circuits.svg#sakhir-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 5,
-    "link": "",
+    "link": "/app/schedule/Saudi Arabia",
     "label": "Saudi Arabia",
-    "icon": "./icons/circuits.svg#jeddah-circuit",
+    "icon": "/icons/circuits.svg#jeddah-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 6,
-    "link": "",
+    "link": "/app/schedule/USA - Miami",
     "label": "USA - Miami",
-    "icon": "./icons/circuits.svg#miami-circuit",
+    "icon": "/icons/circuits.svg#miami-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 7,
-    "link": "",
+    "link": "/app/schedule/Italy - Imola",
     "label": "Italy - Imola",
-    "icon": "./icons/circuits.svg#imola-circuit",
+    "icon": "/icons/circuits.svg#imola-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 8,
-    "link": "",
+    "link": "/app/schedule/Monaco",
     "label": "Monaco",
-    "icon": "./icons/circuits.svg#monaco-circuit",
+    "icon": "/icons/circuits.svg#monaco-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 9,
-    "link": "",
+    "link": "/app/schedule/Spain",
     "label": "Spain",
-    "icon": "./icons/circuits.svg#barcelona-circuit",
+    "icon": "/icons/circuits.svg#barcelona-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 10,
-    "link": "",
+    "link": "/app/schedule/Canada",
     "label": "Canada",
-    "icon": "./icons/circuits.svg#mosport-circuit",
+    "icon": "/icons/circuits.svg#mosport-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 11,
-    "link": "",
+    "link": "/app/schedule/Austria",
     "label": "Austria",
-    "icon": "./icons/circuits.svg#spielberg-circuit",
+    "icon": "/icons/circuits.svg#spielberg-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 12,
-    "link": "",
+    "link": "/app/schedule/England",
     "label": "England",
-    "icon": "./icons/circuits.svg#silverstone-circuit",
+    "icon": "/icons/circuits.svg#silverstone-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 13,
-    "link": "",
+    "link": "/app/schedule/Belgium",
     "label": "Belgium",
-    "icon": "./icons/circuits.svg#spa-circuit",
+    "icon": "/icons/circuits.svg#spa-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 14,
-    "link": "",
+    "link": "/app/schedule/Hungary",
     "label": "Hungary",
-    "icon": "./icons/circuits.svg#hungaroring-circuit",
+    "icon": "/icons/circuits.svg#hungaroring-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 15,
-    "link": "",
+    "link": "/app/schedule/Netherlands",
     "label": "Netherlands",
-    "icon": "./icons/circuits.svg#zandvort-circuit",
+    "icon": "/icons/circuits.svg#zandvort-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 16,
-    "link": "",
+    "link": "/app/schedule/Italy - Monza",
     "label": "Italy - Monza",
-    "icon": "./icons/circuits.svg#monza-circuit",
+    "icon": "/icons/circuits.svg#monza-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 17,
-    "link": "",
+    "link": "/app/schedule/Azerbaijan",
     "label": "Azerbaijan",
-    "icon": "./icons/circuits.svg#baku-circuit",
+    "icon": "/icons/circuits.svg#baku-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 18,
-    "link": "",
+    "link": "/app/schedule/Singapore",
     "label": "Singapore",
-    "icon": "./icons/circuits.svg#marina-bay-circuit",
+    "icon": "/icons/circuits.svg#marina-bay-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 19,
-    "link": "",
+    "link": "/app/schedule/USA - Austin",
     "label": "USA - Austin",
-    "icon": "./icons/circuits.svg#austin-circuit",
+    "icon": "/icons/circuits.svg#austin-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 20,
-    "link": "",
+    "link": "/app/schedule/Mexico",
     "label": "Mexico",
-    "icon": "./icons/circuits.svg#mexico-city-circuit",
+    "icon": "/icons/circuits.svg#mexico-city-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 21,
-    "link": "",
+    "link": "/app/schedule/Brazil",
     "label": "Brazil",
-    "icon": "./icons/circuits.svg#sao-paulo-circuit",
+    "icon": "/icons/circuits.svg#sao-paulo-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 22,
-    "link": "",
+    "link": "/app/schedule/USA - Vegas",
     "label": "USA - Vegas",
-    "icon": "./icons/circuits.svg#vegas-circuit",
+    "icon": "/icons/circuits.svg#vegas-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 23,
-    "link": "",
+    "link": "/app/schedule/Qatar",
     "label": "Qatar",
-    "icon": "./icons/circuits.svg#qatar-circuit",
+    "icon": "/icons/circuits.svg#qatar-circuit",
     "category": "schedule"
   },
   {
     "orderNumber": 24,
-    "link": "",
+    "link": "/app/schedule/Abu Dhabi",
     "label": "Abu Dhabi",
-    "icon": "./icons/circuits.svg#yas-marina-circuit",
+    "icon": "/icons/circuits.svg#yas-marina-circuit",
     "category": "schedule"
   }
 ]

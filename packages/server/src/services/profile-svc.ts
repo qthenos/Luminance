@@ -7,11 +7,10 @@ const ProfileSchema = new Schema<Profile>(
     favoriteCards: [{ type: Schema.Types.ObjectId, ref: "Card" }],
     avatar: String,
   },
-  { collection: "lum-profiles" }
+  { collection: "lum-profiles" },
 );
 
 const ProfileModel = model<Profile>("Profile", ProfileSchema);
-
 
 function index(): Promise<Profile[]> {
   return ProfileModel.find();
@@ -34,22 +33,14 @@ function getFavorites(userid: string) {
     });
 }
 
-
-function update(
-  userid: String,
-  profile: Profile
-): Promise<Profile> {
+function update(userid: String, profile: Profile): Promise<Profile> {
   return ProfileModel.findOne({ userid })
     .then((found) => {
       if (!found) throw `${userid} Not Found`;
       else
-        return ProfileModel.findByIdAndUpdate(
-          found._id,
-          profile,
-          {
-            new: true
-          }
-        );
+        return ProfileModel.findByIdAndUpdate(found._id, profile, {
+          new: true,
+        });
     })
     .then((updated) => {
       if (!updated) throw `${userid} not updated`;
@@ -58,26 +49,31 @@ function update(
 }
 
 function addFavorite(userid: string, cardId: string): Promise<Profile> {
-  return ProfileModel.findOne({ userid })
-    .then((found) => {
-      if (!found) throw `${userid} Not Found`;
-      if (!found.favoriteCards.includes(cardId as any)) {
-        found.favoriteCards.push(cardId as any);
-        return found.save();
-      }
-      return found;
-    });
+  return ProfileModel.findOne({ userid }).then((found) => {
+    if (!found) throw `${userid} Not Found`;
+    if (!found.favoriteCards.includes(cardId as any)) {
+      found.favoriteCards.push(cardId as any);
+      return found.save();
+    }
+    return found;
+  });
 }
 
 function removeFavorite(userid: string, cardId: string): Promise<Profile> {
-  return ProfileModel.findOne({ userid })
-    .then((found) => {
-      if (!found) throw `${userid} Not Found`;
-      found.favoriteCards = found.favoriteCards.filter(
-        (id) => id.toString() !== cardId
-      );
-      return found.save();
-    });
+  return ProfileModel.findOne({ userid }).then((found) => {
+    if (!found) throw `${userid} Not Found`;
+    found.favoriteCards = found.favoriteCards.filter(
+      (id) => id.toString() !== cardId,
+    );
+    return found.save();
+  });
 }
 
-export default { index, get, getFavorites, update, addFavorite, removeFavorite };
+export default {
+  index,
+  get,
+  getFavorites,
+  update,
+  addFavorite,
+  removeFavorite,
+};

@@ -3,7 +3,7 @@
     "name": "Alexander Albon",
     "number": 23,
     "team": "Williams",
-    "imageSrc": "./images/driver-heads/2025williamsalealb01right.avif",
+    "imageSrc": "/images/driver-heads/2025williamsalealb01right.avif",
     "bio": "Alex Albon is a Thai-British Formula One driver currently racing for Williams Racing. Born on March 23, 1996, in London, Albon rose through the junior ranks of motorsport, impressing in karting and Formula 2 before making his F1 debut with Toro Rosso in 2019. Later that year, he was promoted to Red Bull Racing, where he earned several strong finishes and a podium. Known for his smooth driving style, resilience, and technical skill, Albon has since become a key figure in Williams' resurgence, consistently delivering standout performances against stronger competition.",
     "standings": {
       "points": 73,
@@ -24,7 +24,7 @@
     "name": "Fernando Alonso",
     "number": 14,
     "team": "Aston Martin",
-    "imageSrc": "./images/driver-heads/2025astonmartinferalo01right.avif",
+    "imageSrc": "/images/driver-heads/2025astonmartinferalo01right.avif",
     "bio": "Spanish racing legend with two world championships and extensive F1 experience.",
     "standings": {
       "points": 40,
@@ -45,7 +45,7 @@
     "name": "Andrea Kimi Antonelli",
     "number": 12,
     "team": "Mercedes",
-    "imageSrc": "./images/driver-heads/2025mercedesandant01right.avif",
+    "imageSrc": "/images/driver-heads/2025mercedesandant01right.avif",
     "bio": "Rising Italian talent competing for Mercedes-AMG Petronas.",
     "standings": {
       "points": 122,
@@ -66,7 +66,7 @@
     "name": "Oliver Bearman",
     "number": 50,
     "team": "Haas",
-    "imageSrc": "./images/driver-heads/2025haasolibea01right.avif",
+    "imageSrc": "/images/driver-heads/2025haasolibea01right.avif",
     "bio": "British driver competing for Haas F1 Team.",
     "standings": {
       "points": 40,
@@ -87,7 +87,7 @@
     "name": "Gabriel Bortoleto",
     "number": 5,
     "team": "Kick Sauber",
-    "imageSrc": "./images/driver-heads/2025kicksaubergabbor01right.avif",
+    "imageSrc": "/images/driver-heads/2025kicksaubergabbor01right.avif",
     "bio": "Brazilian talent joining F1 with Kick Sauber after impressive junior career.",
     "standings": {
       "points": 19,
@@ -108,7 +108,7 @@
     "name": "Franco Colapinto",
     "number": 43,
     "team": "Alpine",
-    "imageSrc": "./images/driver-heads/2025alpinefracol01right.avif",
+    "imageSrc": "/images/driver-heads/2025alpinefracol01right.avif",
     "bio": "Argentine driver competing for Alpine F1 Team.",
     "standings": {
       "points": 0,
@@ -129,7 +129,7 @@
     "name": "Pierre Gasly",
     "number": 10,
     "team": "Alpine",
-    "imageSrc": "./images/driver-heads/2025alpinepiegas01right.avif",
+    "imageSrc": "/images/driver-heads/2025alpinepiegas01right.avif",
     "bio": "French driver and team leader for Alpine F1 Team.",
     "standings": {
       "points": 22,
@@ -150,7 +150,7 @@
     "name": "Isack Hadjar",
     "number": 45,
     "team": "Racing Bulls",
-    "imageSrc": "./images/driver-heads/2025racingbullsisahad01right.avif",
+    "imageSrc": "/images/driver-heads/2025racingbullsisahad01right.avif",
     "bio": "Franco-Swiss driver racing for Racing Bulls.",
     "standings": {
       "points": 43,
@@ -171,7 +171,7 @@
     "name": "Lewis Hamilton",
     "number": 44,
     "team": "Ferrari",
-    "imageSrc": "./images/driver-heads/2025ferrarilewham01right.avif",
+    "imageSrc": "/images/driver-heads/2025ferrarilewham01right.avif",
     "bio": "British racing legend with seven world championships, now racing for Scuderia Ferrari.",
     "standings": {
       "points": 148,
@@ -192,7 +192,7 @@
     "name": "Nico Hulkenberg",
     "number": 27,
     "team": "Kick Sauber",
-    "imageSrc": "./images/driver-heads/2025kicksaubernichul01right.avif",
+    "imageSrc": "/images/driver-heads/2025kicksaubernichul01right.avif",
     "bio": "Experienced German driver returning to Formula 1 with Kick Sauber.",
     "standings": {
       "points": 43,
@@ -213,7 +213,7 @@
     "name": "Liam Lawson",
     "number": 30,
     "team": "Racing Bulls",
-    "imageSrc": "./images/driver-heads/2025racingbullslialaw01right.avif",
+    "imageSrc": "/images/driver-heads/2025racingbullslialaw01right.avif",
     "bio": "New Zealand driver racing for Racing Bulls F1 Team.",
     "standings": {
       "points": 36,
@@ -234,7 +234,7 @@
     "name": "Charles Leclerc",
     "number": 16,
     "team": "Ferrari",
-    "imageSrc": "./images/driver-heads/2025ferrarichalec01right.avif",
+    "imageSrc": "/images/driver-heads/2025ferrarichalec01right.avif",
     "bio": "Monaco native and key Ferrari driver with multiple podium finishes.",
     "standings": {
       "points": 214,
@@ -255,7 +255,7 @@
     "name": "Lando Norris",
     "number": 4,
     "team": "McLaren",
-    "imageSrc": "./images/driver-heads/2025mclarenlannor01right.avif",
+    "imageSrc": "/images/driver-heads/2025mclarenlannor01right.avif",
     "bio": "British driver for McLaren Racing, known for consistent performances.",
     "standings": {
       "points": 390,
@@ -276,7 +276,7 @@
     "name": "Esteban Ocon",
     "number": 31,
     "team": "Haas",
-    "imageSrc": "./images/driver-heads/2025haasestoco01right.avif",
+    "imageSrc": "/images/driver-heads/2025haasestoco01right.avif",
     "bio": "French driver joining Haas F1 Team for the 2025 season.",
     "standings": {
       "points": 30,
@@ -297,7 +297,7 @@
     "name": "Oscar Piastri",
     "number": 81,
     "team": "McLaren",
-    "imageSrc": "./images/driver-heads/2025mclarenoscpia01right.avif",
+    "imageSrc": "/images/driver-heads/2025mclarenoscpia01right.avif",
     "bio": "Australian driver for McLaren Racing, rising talent in Formula 1.",
     "standings": {
       "points": 366,
@@ -318,7 +318,7 @@
     "name": "George Russell",
     "number": 63,
     "team": "Mercedes",
-    "imageSrc": "./images/driver-heads/2025mercedesgeorus01right.avif",
+    "imageSrc": "/images/driver-heads/2025mercedesgeorus01right.avif",
     "bio": "British driver for Mercedes-AMG Petronas, consistent front-runner.",
     "standings": {
       "points": 276,
@@ -339,7 +339,7 @@
     "name": "Carlos Sainz",
     "number": 55,
     "team": "Williams",
-    "imageSrc": "./images/driver-heads/2025williamscarsai01right.avif",
+    "imageSrc": "/images/driver-heads/2025williamscarsai01right.avif",
     "bio": "Spanish driver joining Williams Racing, experienced F1 competitor.",
     "standings": {
       "points": 38,
@@ -360,7 +360,7 @@
     "name": "Lance Stroll",
     "number": 18,
     "team": "Aston Martin",
-    "imageSrc": "./images/driver-heads/2025astonmartinlanstr01right.avif",
+    "imageSrc": "/images/driver-heads/2025astonmartinlanstr01right.avif",
     "bio": "Canadian driver for Aston Martin, team owner’s son.",
     "standings": {
       "points": 32,
@@ -381,7 +381,7 @@
     "name": "Yuki Tsunoda",
     "number": 22,
     "team": "Red Bull Racing",
-    "imageSrc": "./images/driver-heads/2025redbullracingyuktsu01right.avif",
+    "imageSrc": "/images/driver-heads/2025redbullracingyuktsu01right.avif",
     "bio": "Japanese driver for Red Bull Racing, technical and consistent performer.",
     "standings": {
       "points": 28,
@@ -402,7 +402,7 @@
     "name": "Max Verstappen",
     "number": 1,
     "team": "Red Bull Racing",
-    "imageSrc": "./images/driver-heads/2025redbullracingmaxver01right.avif",
+    "imageSrc": "/images/driver-heads/2025redbullracingmaxver01right.avif",
     "bio": "Dutch racing sensation with multiple world championships and numerous records.",
     "standings": {
       "points": 341,

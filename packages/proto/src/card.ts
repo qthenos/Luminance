@@ -27,7 +27,9 @@ export class CardElement extends LitElement {
   private getHrefWithCardId(): string {
     if (!this.href) return "";
     const separator = this.href.includes("?") ? "&" : "?";
-    return this.cardId ? `${this.href}${separator}cardId=${this.cardId}` : this.href;
+    return this.cardId
+      ? `${this.href}${separator}cardId=${this.cardId}`
+      : this.href;
   }
 
   override render() {

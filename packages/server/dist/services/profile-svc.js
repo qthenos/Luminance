@@ -49,13 +49,9 @@ function update(userid, profile) {
   return ProfileModel.findOne({ userid }).then((found) => {
     if (!found) throw `${userid} Not Found`;
     else
-      return ProfileModel.findByIdAndUpdate(
-        found._id,
-        profile,
-        {
-          new: true
-        }
-      );
+      return ProfileModel.findByIdAndUpdate(found._id, profile, {
+        new: true
+      });
   }).then((updated) => {
     if (!updated) throw `${userid} not updated`;
     else return updated;
@@ -80,4 +76,11 @@ function removeFavorite(userid, cardId) {
     return found.save();
   });
 }
-var profile_svc_default = { index, get, getFavorites, update, addFavorite, removeFavorite };
+var profile_svc_default = {
+  index,
+  get,
+  getFavorites,
+  update,
+  addFavorite,
+  removeFavorite
+};

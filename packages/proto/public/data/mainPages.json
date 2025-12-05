@@ -1,30 +1,30 @@
 [
   {
     "orderNumber": 1,
-    "link": "./schedule.html",
+    "link": "/app/schedule",
     "label": "Schedule",
-    "icon": "./icons/utilities.svg#schedule-utility",
+    "icon": "/icons/utilities.svg#schedule-utility",
     "category": "mainPages"
   },
   {
     "orderNumber": 2,
-    "link": "./constructors.html",
+    "link": "/app/constructors",
     "label": "Constructors",
-    "icon": "./icons/utilities.svg#constructors-utility",
+    "icon": "/icons/utilities.svg#constructors-utility",
     "category": "mainPages"
   },
   {
     "orderNumber": 3,
-    "link": "./drivers.html",
+    "link": "/app/drivers",
     "label": "Drivers",
-    "icon": "./icons/utilities.svg#drivers-utility",
+    "icon": "/icons/utilities.svg#drivers-utility",
     "category": "mainPages"
   },
   {
     "orderNumber": 4,
-    "link": "./favorites.html",
+    "link": "/app/favorites",
     "label": "Favorites",
-    "icon": "./icons/utilities.svg#favorites-utility",
+    "icon": "/icons/utilities.svg#favorites-utility",
     "category": "mainPages"
   }
 ]

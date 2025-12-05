@@ -18,8 +18,16 @@
             }
         },
         {
+            "label": "Format App",
+            "type": "shell",
+            "command": "npx prettier . --write",
+            "options": {
+                "cwd": "${workspaceFolder}/packages/app"
+            }
+        },
+        {
             "label": "Format All",
-            "dependsOn": ["Format Proto", "Format Server"]
+            "dependsOn": ["Format Proto", "Format Server", "Format App"]
         }
     ]
 }

@@ -52,12 +52,20 @@ export class DeckElement extends LitElement {
         `;
       } else {
         return html`
-          <card-element href="${c.link}" label="${c.label}" cardId="${c._id}"></card-element>
+          <card-element
+            href="${c.link}"
+            label="${c.label}"
+            cardId="${c._id}"
+          ></card-element>
         `;
       }
     }
 
-    return html` ${sortedCards.map(renderCard)} `;
+    return html`
+      <article class="grid">
+        <main>${sortedCards.map(renderCard)}</main>
+      </article>
+    `;
   }
 
   static styles = [
@@ -69,6 +77,25 @@ export class DeckElement extends LitElement {
 
       card-element {
         display: block;
+      }
+
+      .grid {
+        --box-size: 150px;
+        --page-grid-gap: var(--size-spacing-medium);
+
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(var(--box-size), var(--box-size))
+        );
+        justify-content: center;
+        padding: var(--page-grid-gap);
+        gap: var(--page-grid-gap);
+        align-items: start;
+      }
+
+      .grid > main {
+        display: contents;
       }
     `,
   ];

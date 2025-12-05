@@ -1,0 +1,11 @@
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <symbol id="racing-lines-top-design" viewBox="0 0 200 500">
+            <path d="M200 200v25000h-91v-25091Z"></path><path d="M0 0v25200h97v-25103Z"></path>
+        </symbol>
+        <symbol id="racing-lines-bot-design" viewBox="0 0 200 500">
+            <path d="M200 200v128l-200 -200v-128Z"></path><path d="M200 344v25000h-91v-25091Z"></path><path d="M0 144v25200h97v-25103Z"></path>
+        </symbol>
+    </defs>
+</svg>

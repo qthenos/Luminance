@@ -29,6 +29,8 @@ var import_teams = __toESM(require("./routes/teams"));
 var import_drivers = __toESM(require("./routes/drivers"));
 var import_profiles = __toESM(require("./routes/profiles"));
 var import_auth = __toESM(require("./routes/auth"));
+var import_promises = __toESM(require("node:fs/promises"));
+var import_path = __toESM(require("path"));
 (0, import_mongo.connect)("LuminarDB");
 const app = (0, import_express.default)();
 const port = process.env.PORT || 3e3;
@@ -37,12 +39,18 @@ app.use(import_express.default.static(staticDir));
 app.use(import_express.default.json());
 app.use("/api/cards", import_auth.authenticateUser, import_cards.default);
 app.use("/api/tracks", import_auth.authenticateUser, import_tracks.default);
-app.use("/api/teams", import_auth.authenticateUser, import_teams.default);
+app.use("/api/constructors", import_auth.authenticateUser, import_teams.default);
 app.use("/api/drivers", import_auth.authenticateUser, import_drivers.default);
 app.use("/api/profiles", import_auth.authenticateUser, import_profiles.default);
 app.use("/auth", import_auth.default);
 app.get("/hello", (req, res) => {
   res.send("Hello world!");
+});
+app.use("/app", (req, res) => {
+  const indexHtml = import_path.default.resolve(staticDir, "index.html");
+  import_promises.default.readFile(indexHtml, { encoding: "utf8" }).then(
+    (html) => res.send(html)
+  );
 });
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);

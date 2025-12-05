@@ -24,7 +24,7 @@ export class HeaderElement extends LitElement {
       <header>
         <div class="title-section">
           <h1><a href="./index.html">${this.name}</a></h1>
-          ${this.identifier? this.renderLikeButton() : html``}
+          ${this.identifier ? this.renderLikeButton() : html``}
         </div>
         <div class="welcome-section">
           <div class="user-profile">
@@ -303,7 +303,7 @@ export class HeaderElement extends LitElement {
 
   renderSignInButton() {
     return html`
-      <button class="sign-btn" onclick="location.href='/login.html';">
+      <button class="sign-btn" onclick="location.href='/app/login';">
         Sign In
       </button>
     `;
@@ -312,9 +312,9 @@ export class HeaderElement extends LitElement {
   renderLikeButton() {
     return html`
       <div class="heart-container" title="Like">
-        <input 
-          type="checkbox" 
-          class="checkbox" 
+        <input
+          type="checkbox"
+          class="checkbox"
           id="Give-It-An-Id"
           .checked=${this.isFavorited}
           @change=${this.handleLikeClick}
@@ -398,15 +398,14 @@ export class HeaderElement extends LitElement {
     if (!this.identifier) return;
 
     try {
-      const response = await fetch(
-        `/api/profiles/${userid}/favorites`,
-        { headers: this.authorization }
-      );
+      const response = await fetch(`/api/profiles/${userid}/favorites`, {
+        headers: this.authorization,
+      });
 
       if (response.ok) {
         const favorites = await response.json();
         this.isFavorited = favorites.some(
-          (card: any) => card._id === this.identifier
+          (card: any) => card._id === this.identifier,
         );
       }
     } catch (error) {

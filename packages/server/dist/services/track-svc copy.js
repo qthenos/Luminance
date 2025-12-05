@@ -8,17 +8,21 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
+  if ((from && typeof from === "object") || typeof from === "function") {
     for (let key of __getOwnPropNames(from))
       if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+        __defProp(to, key, {
+          get: () => from[key],
+          enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
+        });
   }
   return to;
 };
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var __toCommonJS = (mod) =>
+  __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var track_svc_copy_exports = {};
 __export(track_svc_copy_exports, {
-  default: () => track_svc_copy_default
+  default: () => track_svc_copy_default,
 });
 module.exports = __toCommonJS(track_svc_copy_exports);
 var import_mongoose = require("mongoose");
@@ -36,22 +40,24 @@ const TrackSchema = new import_mongoose.Schema(
     lapRecord: {
       time: { type: String, required: true },
       driver: { type: String, required: true },
-      year: { type: Number, required: true }
+      year: { type: Number, required: true },
     },
     figure: {
       src: { type: String, required: true },
-      caption: { type: String, required: true }
-    }
+      caption: { type: String, required: true },
+    },
   },
-  { collection: "lum-tracks" }
+  { collection: "lum-tracks" },
 );
 const TrackModel = (0, import_mongoose.model)("Track", TrackSchema);
 function index() {
   return TrackModel.find();
 }
 function get(trackName) {
-  return TrackModel.find({ trackName }).then((list) => list[0]).catch((err) => {
-    throw `${trackName} Not Found`;
-  });
+  return TrackModel.find({ trackName })
+    .then((list) => list[0])
+    .catch((err) => {
+      throw `${trackName} Not Found`;
+    });
 }
 var track_svc_copy_default = { index, get };

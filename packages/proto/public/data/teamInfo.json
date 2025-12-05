@@ -1,7 +1,7 @@
 [
   {
     "teamName": "McLaren",
-    "imageSrc": "./images/2025mclarencarright.avif",
+    "imageSrc": "/images/f1_cars_webp/2025mclarencarright.webp",
     "ranking": {
       "wccPosition": 1,
       "currentPoints": 623
@@ -21,7 +21,7 @@
   },
   {
     "teamName": "RedBull",
-    "imageSrc": "./images/2025redbullracingmaxver01right.avif",
+    "imageSrc": "/images/f1_cars_webp/2025redbullracingcarright.webp",
     "ranking": {
       "wccPosition": 2,
       "currentPoints": 546
@@ -41,7 +41,7 @@
   },
   {
     "teamName": "VCARB",
-    "imageSrc": "./images/2025racingbullsisahad01right.avif",
+    "imageSrc": "/images/f1_cars_webp/2025racingbullscarright.webp",
     "ranking": {
       "wccPosition": 3,
       "currentPoints": 108
@@ -61,7 +61,7 @@
   },
   {
     "teamName": "Ferrari",
-    "imageSrc": "./images/2025ferrarichalec01right.avif",
+    "imageSrc": "/images/f1_cars_webp/2025ferraricarright.webp",
     "ranking": {
       "wccPosition": 4,
       "currentPoints": 454
@@ -81,7 +81,7 @@
   },
   {
     "teamName": "Mercedes",
-    "imageSrc": "./images/2025mercedesandant01right.avif",
+    "imageSrc": "/images/f1_cars_webp/2025mercedescarright.webp",
     "ranking": {
       "wccPosition": 5,
       "currentPoints": 410
@@ -101,7 +101,7 @@
   },
   {
     "teamName": "Williams",
-    "imageSrc": "./images/2025williamsalealb01right.avif",
+    "imageSrc": "/images/f1_cars_webp/2025williamscarright.webp",
     "ranking": {
       "wccPosition": 6,
       "currentPoints": 35
@@ -121,7 +121,7 @@
   },
   {
     "teamName": "Aston Martin",
-    "imageSrc": "./images/2025astonmartinferalo01right.avif",
+    "imageSrc": "/images/f1_cars_webp/2025astonmartincarright.webp",
     "ranking": {
       "wccPosition": 7,
       "currentPoints": 94
@@ -141,7 +141,7 @@
   },
   {
     "teamName": "Alpine",
-    "imageSrc": "./images/2025alpinefracol01right.avif",
+    "imageSrc": "/images/f1_cars_webp/2025alpinecarright.webp",
     "ranking": {
       "wccPosition": 8,
       "currentPoints": 11
@@ -161,7 +161,7 @@
   },
   {
     "teamName": "Sauber",
-    "imageSrc": "./images/2025kicksaubergabbor01right.avif",
+    "imageSrc": "/images/f1_cars_webp/2025kicksaubercarright.webp",
     "ranking": {
       "wccPosition": 9,
       "currentPoints": 0
@@ -181,7 +181,7 @@
   },
   {
     "teamName": "Haas",
-    "imageSrc": "./images/2025haasestoco01right.avif",
+    "imageSrc": "/images/f1_cars_webp/2025haascarright.webp",
     "ranking": {
       "wccPosition": 10,
       "currentPoints": 8
