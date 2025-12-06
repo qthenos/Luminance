@@ -1,5 +1,8 @@
-import { Auth, define, History, Switch } from "@calpoly/mustang";
+import { Auth, define, History, Switch, Store } from "@calpoly/mustang";
 import { html } from "lit";
+import { Msg } from "./messages";
+import { Model, init } from "./model";
+import update from "./update";
 import { HeaderElement } from "./components/header";
 import { CardElement } from "./components/card";
 import { DeckElement } from "./components/deck";
@@ -8,6 +11,10 @@ import { DriverElement } from "./components/driver";
 import { TeamElement } from "./components/team";
 import { TrackElement } from "./components/track";
 import { LoginElement } from "./components/login";
+import { DriversView } from "./views/drivers";
+import { TeamsView } from "./views/teams";
+import { TracksView } from "./views/tracks";
+import { FavoritesView } from "./views/favorites";
 
 // Driver label to number mapping
 const driverMap: Record<string, number> = {
@@ -40,31 +47,19 @@ const routes = [
   },
   {
     path: "/app/schedule",
-    view: () => html`
-      <header-element name="Schedule"></header-element>
-      <deck-element src="/api/cards/category/schedule"></deck-element>
-    `,
+    view: () => html`<tracks-view></tracks-view>`,
   },
   {
     path: "/app/constructors",
-    view: () => html`
-      <header-element name="Constructors"></header-element>
-      <deck-element src="/api/cards/category/constructors"></deck-element>
-    `,
+    view: () => html`<teams-view></teams-view>`,
   },
   {
     path: "/app/drivers",
-    view: () => html`
-      <header-element name="Drivers"></header-element>
-      <deck-element src="/api/cards/category/drivers"></deck-element>
-    `,
+    view: () => html`<drivers-view></drivers-view>`,
   },
   {
     path: "/app/favorites",
-    view: () => html`
-      <header-element name="Favorites"></header-element>
-      <favorites-element></favorites-element>
-    `,
+    view: () => html`<favorites-view></favorites-view>`,
   },
   {
     path: "/app/schedule/:label",
@@ -107,12 +102,22 @@ define({
       super(routes, "lum:history", "lum:auth");
     }
   },
+  "mu-store": class AppStore extends Store.Provider<Model, Msg>
+  {
+    constructor() {
+      super(update, init, "lum:auth");
+    }
+  },
   "card-element": CardElement,
   "deck-element": DeckElement,
   "driver-element": DriverElement,
   "favorites-element": FavoritesElement,
   "header-element": HeaderElement,
   "login-element": LoginElement,
+  "drivers-view": DriversView,
+  "teams-view": TeamsView,
+  "tracks-view": TracksView,
+  "favorites-view": FavoritesView,
   "team-element": TeamElement,
   "track-element": TrackElement,
 });

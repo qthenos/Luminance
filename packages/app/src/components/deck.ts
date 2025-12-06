@@ -13,11 +13,14 @@ export class DeckElement extends LitElement {
   @property()
   src?: string;
 
+  @property({ attribute: false })
+  cards?: Array<Card>;
+
   @state()
-  cards: Array<Card> = [];
+  _cards: Array<Card> = [];
 
   render() {
-    const { cards } = this;
+    const cards = this.cards ?? this._cards;
     const sortedCards = [...cards].sort(
       (a, b) => a.orderNumber - b.orderNumber,
     );
@@ -111,7 +114,7 @@ export class DeckElement extends LitElement {
     super.connectedCallback();
     this._authObserver.observe((auth: Auth.Model) => {
       this._user = auth.user;
-      if (this.src) this.hydrate(this.src);
+      if (!this.cards && this.src) this.hydrate(this.src);
     });
   }
 
@@ -120,7 +123,7 @@ export class DeckElement extends LitElement {
       .then((res) => res.json())
       .then((json: object) => {
         if (json) {
-          this.cards = json as Array<Card>;
+          this._cards = json as Array<Card>;
         }
       });
   }

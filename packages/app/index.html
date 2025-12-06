@@ -24,7 +24,9 @@
   <body class="page">
     <mu-history provides="lum:history">
       <mu-auth provides="lum:auth">
-        <mu-switch></mu-switch>
+        <mu-store provides="lum:model">
+          <mu-switch></mu-switch>
+        </mu-store>
       </mu-auth>
     </mu-history>
     <script src="/scripts/darkmode.js"></script>
