@@ -45,4 +45,16 @@ router.get("/:number", (req, res) => {
   }
   import_driver_svc.default.get(driverNumber).then((driver) => res.json(driver)).catch((err) => res.status(404).send(err));
 });
+router.put("/:number", (req, res) => {
+  const { number } = req.params;
+  const driverNumber = Number(number);
+  if (Number.isNaN(driverNumber)) {
+    return res.status(400).send("Bad request: number must be numeric.");
+  }
+  const newDriver = req.body;
+  import_driver_svc.default.update(driverNumber, newDriver).then((driver) => res.json(driver)).catch((err) => {
+    console.error("Update error:", err);
+    res.status(404).json({ error: err });
+  });
+});
 var drivers_default = router;

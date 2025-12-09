@@ -3,6 +3,7 @@ import express, { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken";
 
 import credentials from "../services/credential-svc";
+import profiles from "../services/profile-svc";
 
 const router = express.Router();
 
@@ -31,11 +32,21 @@ router.post("/register", (req: Request, res: Response) => {
   } else {
     credentials
       .create(username, password)
+      .then((creds) => {
+        // Create a profile for the new user
+        return profiles.create({ userid: creds.username })
+          .then(() => creds)
+          .catch((profileErr) => {
+            // If profile creation fails, clean up by throwing error
+            throw new Error(`Profile creation failed: ${profileErr.message}`);
+          });
+      })
       .then((creds) => generateAccessToken(creds.username))
       .then((token) => {
         res.status(201).send({ token: token });
       })
       .catch((err) => {
+        console.error("Registration error:", err);
         res.status(409).send({ error: err.message });
       });
   }

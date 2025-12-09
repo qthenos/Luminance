@@ -12,6 +12,11 @@ const ProfileSchema = new Schema<Profile>(
 
 const ProfileModel = model<Profile>("Profile", ProfileSchema);
 
+function create(profile: Profile): Promise<Profile> {
+  const newProfile = new ProfileModel(profile);
+  return newProfile.save();
+}
+
 function index(): Promise<Profile[]> {
   return ProfileModel.find();
 }
@@ -70,6 +75,7 @@ function removeFavorite(userid: string, cardId: string): Promise<Profile> {
 }
 
 export default {
+  create,
   index,
   get,
   getFavorites,

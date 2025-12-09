@@ -31,6 +31,10 @@ const ProfileSchema = new import_mongoose.Schema(
   { collection: "lum-profiles" }
 );
 const ProfileModel = (0, import_mongoose.model)("Profile", ProfileSchema);
+function create(profile) {
+  const newProfile = new ProfileModel(profile);
+  return newProfile.save();
+}
 function index() {
   return ProfileModel.find();
 }
@@ -77,6 +81,7 @@ function removeFavorite(userid, cardId) {
   });
 }
 var profile_svc_default = {
+  create,
   index,
   get,
   getFavorites,

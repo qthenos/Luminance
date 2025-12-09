@@ -41,4 +41,9 @@ router.get("/:teamName", (req, res) => {
   const { teamName } = req.params;
   import_team_svc.default.get(teamName).then((team) => res.json(team)).catch((err) => res.status(404).send(err));
 });
+router.put("/:teamName", (req, res) => {
+  const { teamName } = req.params;
+  const newTeam = req.body;
+  import_team_svc.default.update(teamName, newTeam).then((team) => res.json(team)).catch((err) => res.status(404).end());
+});
 var teams_default = router;

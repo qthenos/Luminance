@@ -49,4 +49,27 @@ function get(teamName) {
     throw `${teamName} Not Found`;
   });
 }
-var team_svc_default = { index, get };
+function update(teamName, team) {
+  const updateOps = {};
+  Object.entries(team).forEach(([key, value]) => {
+    if (typeof value === "object" && value !== null) {
+      Object.entries(value).forEach(([nestedKey, nestedValue]) => {
+        updateOps[`${key}.${nestedKey}`] = nestedValue;
+      });
+    } else {
+      updateOps[key] = value;
+    }
+  });
+  return TeamModel.findOneAndUpdate({ teamName }, { $set: updateOps }, {
+    new: true
+  }).then((updated) => {
+    if (!updated) {
+      console.error(`Team ${teamName} not found for update`);
+      throw `${teamName} not updated`;
+    } else return updated;
+  }).catch((err) => {
+    console.error(`Update error for team ${teamName}:`, err);
+    throw err;
+  });
+}
+var team_svc_default = { index, get, update };

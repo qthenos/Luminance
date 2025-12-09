@@ -54,4 +54,27 @@ function get(trackName) {
     throw `${trackName} Not Found`;
   });
 }
-var track_svc_default = { index, get };
+function update(trackName, track) {
+  const updateOps = {};
+  Object.entries(track).forEach(([key, value]) => {
+    if (typeof value === "object" && value !== null) {
+      Object.entries(value).forEach(([nestedKey, nestedValue]) => {
+        updateOps[`${key}.${nestedKey}`] = nestedValue;
+      });
+    } else {
+      updateOps[key] = value;
+    }
+  });
+  return TrackModel.findOneAndUpdate({ trackName }, { $set: updateOps }, {
+    new: true
+  }).then((updated) => {
+    if (!updated) {
+      console.error(`Track ${trackName} not found for update`);
+      throw `${trackName} not updated`;
+    } else return updated;
+  }).catch((err) => {
+    console.error(`Update error for track ${trackName}:`, err);
+    throw err;
+  });
+}
+var track_svc_default = { index, get, update };

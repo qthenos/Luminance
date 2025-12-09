@@ -20,4 +20,13 @@ router.get("/:teamName", (req: Request, res: Response) => {
     .catch((err) => res.status(404).send(err));
 });
 
+router.put("/:teamName", (req: Request, res: Response) => {
+  const { teamName } = req.params;
+  const newTeam = req.body;
+
+  Teams.update(teamName, newTeam)
+    .then((team: Team) => res.json(team))
+    .catch((err) => res.status(404).end());
+});
+
 export default router;

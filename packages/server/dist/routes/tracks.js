@@ -41,4 +41,9 @@ router.get("/:trackName", (req, res) => {
   const { trackName } = req.params;
   import_track_svc.default.get(trackName).then((track) => res.json(track)).catch((err) => res.status(404).send(err));
 });
+router.put("/:trackName", (req, res) => {
+  const { trackName } = req.params;
+  const newTrack = req.body;
+  import_track_svc.default.update(trackName, newTrack).then((track) => res.json(track)).catch((err) => res.status(404).end());
+});
 var tracks_default = router;

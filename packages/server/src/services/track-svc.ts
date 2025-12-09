@@ -40,4 +40,33 @@ function get(trackName: String): Promise<Track> {
     });
 }
 
-export default { index, get };
+function update(trackName: String, track: Track): Promise<Track> {
+  // Use $set to update individual fields to avoid conflicts
+  const updateOps: Record<string, any> = {};
+  
+  Object.entries(track).forEach(([key, value]) => {
+    if (typeof value === 'object' && value !== null) {
+      // For nested objects, use dot notation
+      Object.entries(value).forEach(([nestedKey, nestedValue]) => {
+        updateOps[`${key}.${nestedKey}`] = nestedValue;
+      });
+    } else {
+      updateOps[key] = value;
+    }
+  });
+  
+  return TrackModel.findOneAndUpdate({ trackName }, { $set: updateOps }, {
+    new: true,
+  }).then((updated) => {
+    if (!updated) {
+      console.error(`Track ${trackName} not found for update`);
+      throw `${trackName} not updated`;
+    }
+    else return updated as Track;
+  }).catch((err) => {
+    console.error(`Update error for track ${trackName}:`, err);
+    throw err;
+  });
+}
+
+export default { index, get, update };

@@ -11,6 +11,7 @@ import { DriverElement } from "./components/driver";
 import { TeamElement } from "./components/team";
 import { TrackElement } from "./components/track";
 import { LoginElement } from "./components/login";
+import { SignupElement } from "./components/signup";
 import { DriversView } from "./views/drivers";
 import { TeamsView } from "./views/teams";
 import { TracksView } from "./views/tracks";
@@ -44,6 +45,10 @@ const routes = [
   {
     path: "/app/login",
     view: () => html`<login-element></login-element>`,
+  },
+  {
+    path: "/app/signup",
+    view: () => html`<signup-element></signup-element>`,
   },
   {
     path: "/app/schedule",
@@ -114,6 +119,7 @@ define({
   "favorites-element": FavoritesElement,
   "header-element": HeaderElement,
   "login-element": LoginElement,
+  "signup-element": SignupElement,
   "drivers-view": DriversView,
   "teams-view": TeamsView,
   "tracks-view": TracksView,

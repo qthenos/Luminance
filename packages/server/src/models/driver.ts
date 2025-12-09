@@ -5,6 +5,7 @@ export interface Driver {
   imageSrc: string;
   bio: string;
   standings: {
+    team: string;
     points: number;
     position: string;
   };

@@ -20,4 +20,13 @@ router.get("/:trackName", (req: Request, res: Response) => {
     .catch((err) => res.status(404).send(err));
 });
 
+router.put("/:trackName", (req: Request, res: Response) => {
+  const { trackName } = req.params;
+  const newTrack = req.body;
+
+  Tracks.update(trackName, newTrack)
+    .then((track: Track) => res.json(track))
+    .catch((err) => res.status(404).end());
+});
+
 export default router;

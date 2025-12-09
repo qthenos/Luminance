@@ -30,6 +30,7 @@ const DriverSchema = new import_mongoose.Schema(
     imageSrc: { type: String, required: true },
     bio: { type: String, required: true },
     standings: {
+      team: { type: String, required: true },
       points: { type: Number, required: true },
       position: { type: String, required: true }
     },
@@ -55,4 +56,27 @@ function get(number) {
     throw `${number} Not Found`;
   });
 }
-var driver_svc_default = { index, get };
+function update(number, driver) {
+  const updateOps = {};
+  Object.entries(driver).forEach(([key, value]) => {
+    if (typeof value === "object" && value !== null) {
+      Object.entries(value).forEach(([nestedKey, nestedValue]) => {
+        updateOps[`${key}.${nestedKey}`] = nestedValue;
+      });
+    } else {
+      updateOps[key] = value;
+    }
+  });
+  return DriverModel.findOneAndUpdate({ number }, { $set: updateOps }, {
+    new: true
+  }).then((updated) => {
+    if (!updated) {
+      console.error(`Driver ${number} not found for update`);
+      throw `${number} not updated`;
+    } else return updated;
+  }).catch((err) => {
+    console.error(`Update error for driver ${number}:`, err);
+    throw err;
+  });
+}
+var driver_svc_default = { index, get, update };

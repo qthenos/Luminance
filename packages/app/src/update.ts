@@ -24,6 +24,14 @@ export default function update(
       return { ...model, driver: payload };
     }
 
+    case "driver/update": {
+      return [
+        model,
+        updateDriver(payload, user)
+          .then((driver) => ["driver/response", driver])
+      ];
+    }
+
     case "drivers/request": {
       return [
         model,
@@ -47,6 +55,14 @@ export default function update(
       return { ...model, team: payload };
     }
 
+    case "team/update": {
+      return [
+        model,
+        updateTeam(payload, user)
+          .then((team) => ["team/response", team])
+      ];
+    }
+
     case "teams/request": {
       return [
         model,
@@ -68,6 +84,14 @@ export default function update(
     }
     case "track/response": {
       return { ...model, track: payload };
+    }
+
+    case "track/update": {
+      return [
+        model,
+        updateTrack(payload, user)
+          .then((track) => ["track/response", track])
+      ];
     }
 
     case "tracks/request": {
@@ -122,6 +146,32 @@ function requestDriver(
     });
 }
 
+function updateDriver(
+  msg: { number: number; data: Driver },
+  user?: Auth.User
+): Promise<Driver> {
+  return fetch(`/api/drivers/${msg.number}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      ...Auth.headers(user)
+    },
+    body: JSON.stringify(msg.data)
+  })
+    .then((response: Response) => {
+      if (response.status === 200) {
+        return response.json();
+      }
+      return undefined;
+    })
+    .then((json: unknown) => {
+      if (json) {
+        return json as Driver;
+      } else
+        throw "No JSON in response body";
+    });
+}
+
 function requestDrivers(user?: Auth.User): Promise<Card[]> {
   return fetch(`/api/cards/category/drivers`, {
     headers: Auth.headers(user)
@@ -161,6 +211,32 @@ function requestTeam(
     });
 }
 
+function updateTeam(
+  msg: { teamName: string; data: Team },
+  user?: Auth.User
+): Promise<Team> {
+  return fetch(`/api/constructors/${msg.teamName}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      ...Auth.headers(user)
+    },
+    body: JSON.stringify(msg.data)
+  })
+    .then((response: Response) => {
+      if (response.status === 200) {
+        return response.json();
+      }
+      return undefined;
+    })
+    .then((json: unknown) => {
+      if (json) {
+        return json as Team;
+      } else
+        throw "No JSON in response body";
+    });
+}
+
 function requestTeams(user?: Auth.User): Promise<Card[]> {
   return fetch(`/api/cards/category/constructors`, {
     headers: Auth.headers(user)
@@ -185,6 +261,32 @@ function requestTrack(
 ): Promise<Track> {
   return fetch(`/api/tracks/${msg.trackName}`, {
     headers: Auth.headers(user)
+  })
+    .then((response: Response) => {
+      if (response.status === 200) {
+        return response.json();
+      }
+      return undefined;
+    })
+    .then((json: unknown) => {
+      if (json) {
+        return json as Track;
+      } else
+        throw "No JSON in response body";
+    });
+}
+
+function updateTrack(
+  msg: { trackName: string; data: Track },
+  user?: Auth.User
+): Promise<Track> {
+  return fetch(`/api/tracks/${msg.trackName}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      ...Auth.headers(user)
+    },
+    body: JSON.stringify(msg.data)
   })
     .then((response: Response) => {
       if (response.status === 200) {
