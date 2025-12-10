@@ -1,6 +1,6 @@
 import { html, css } from "lit";
 import { property, state } from "lit/decorators.js";
-import { Auth, Observer, define, History, Form, View } from "@calpoly/mustang";
+import { Auth, Observer, define, Form, View } from "@calpoly/mustang";
 import reset from "../styles/reset.css.ts";
 import { Msg } from "../messages";
 import { Model } from "../model";
@@ -426,9 +426,15 @@ export class TrackElement extends View<Model, Msg> {
       if (Array.isArray(this.data[parts[0]]) || 
           (parts.length === 1 && Array.isArray(this.data[key]))) {
         // Convert comma-separated string back to array
-        current[finalKey] = value.split(',').map((item: string) => item.trim());
+        current[finalKey] = String(value).split(',').map((item: string) => item.trim());
       } else {
-        current[finalKey] = value;
+        // Convert to appropriate type based on original value
+        const originalValue = this.data[key];
+        if (typeof originalValue === 'number') {
+          current[finalKey] = isNaN(Number(value)) ? value : Number(value);
+        } else {
+          current[finalKey] = value;
+        }
       }
     });
     

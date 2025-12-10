@@ -1,6 +1,6 @@
 import { html, css } from "lit";
 import { property, state } from "lit/decorators.js";
-import { Auth, Observer, define, History, Form, View } from "@calpoly/mustang";
+import { Auth, Observer, define, Form, View } from "@calpoly/mustang";
 import reset from "../styles/reset.css.ts";
 import { Msg } from "../messages";
 import { Model } from "../model";
