@@ -65,8 +65,12 @@ export class SignupFormElement extends LitElement {
         }),
       })
         .then((res) => {
-          if (res.status !== 201) throw "Signup failed";
-          else return res.json();
+          if (res.status !== 201) {
+            return res.json().then((data) => {
+              throw data.error || "Signup failed";
+            });
+          }
+          return res.json();
         })
         .then((json: object) => {
           const { token } = json as { token: string };
@@ -78,9 +82,9 @@ export class SignupFormElement extends LitElement {
           console.log("dispatching message", customEvent);
           this.dispatchEvent(customEvent);
         })
-        .catch((error: Error) => {
+        .catch((error: Error | string) => {
           console.log(error);
-          this.error = error.toString();
+          this.error = typeof error === "string" ? error : error.toString();
         });
     }
   }

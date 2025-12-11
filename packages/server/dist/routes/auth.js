@@ -66,7 +66,8 @@ router.post("/register", (req, res) => {
       res.status(201).send({ token });
     }).catch((err) => {
       console.error("Registration error:", err);
-      res.status(409).send({ error: err.message });
+      const errorMessage = err instanceof Error ? err.message : String(err);
+      res.status(409).send({ error: errorMessage });
     });
   }
 });

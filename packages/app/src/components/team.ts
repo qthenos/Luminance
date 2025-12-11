@@ -343,7 +343,7 @@ export class TeamElement extends View<Model, Msg> {
               .init=${d}
               @mu-form:submit=${this.handleSubmit}>
               ${Object.entries(d).map(([key, value]) => {
-                if (key === 'imageSrc' || key === '_id') {
+                if (key === 'imageSrc' || key === '_id' || key === 'teamName') {
                   return null;
                 }
                 if (key === 'drivers' && Array.isArray(value)) {

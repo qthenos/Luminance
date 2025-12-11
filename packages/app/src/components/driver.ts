@@ -335,6 +335,55 @@ export class DriverElement extends View<Model, Msg> {
         font-family: var(--font-family-display);
         font-size: var(--size-type-medium);
       }
+
+      @media (max-width: 1024px) {
+        article > figure {
+          width: 140px;
+          padding: 8px;
+        }
+
+        article > figure img {
+          max-width: 124px;
+        }
+
+        article > .number {
+          padding: 8px;
+        }
+
+        article > .number svg {
+          width: 70px;
+          height: 170px;
+        }
+
+        article > .number p {
+          font-size: var(--size-type-xlarge);
+        }
+      }
+
+      @media (max-width: 768px) {
+        article > figure {
+          width: 100px;
+          padding: 6px;
+        }
+
+        article > figure img {
+          max-width: 88px;
+        }
+
+        article > .number {
+          max-height: 400px;
+          padding: 6px;
+        }
+
+        article > .number svg {
+          width: 50px;
+          height: 120px;
+        }
+
+        article > .number p {
+          font-size: var(--size-type-large);
+        }
+      }
     `,
   ];
 
@@ -392,7 +441,7 @@ export class DriverElement extends View<Model, Msg> {
               @mu-form:submit=${this.handleSubmit}>
               ${Object.entries(d).map(([key, value]) => {
                 // Skip image-related fields and ObjectID
-                if (key === 'imageSrc' || key === 'name' || key === '_id') {
+                if (key === 'imageSrc' || key === 'name' || key === '_id' || key == 'number') {
                   return null;
                 }
                 return renderField(key, value);
