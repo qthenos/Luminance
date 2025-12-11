@@ -59,7 +59,7 @@ router.post("/register", (req, res) => {
     res.status(400).send("Bad request: Invalid input data.");
   } else {
     import_credential_svc.default.create(username, password).then((creds) => {
-      return import_profile_svc.default.create({ userid: creds.username }).then(() => creds).catch((profileErr) => {
+      return import_profile_svc.default.create({ userid: creds.username, favoriteCards: [], avatar: "" }).then(() => creds).catch((profileErr) => {
         throw new Error(`Profile creation failed: ${profileErr.message}`);
       });
     }).then((creds) => generateAccessToken(creds.username)).then((token) => {

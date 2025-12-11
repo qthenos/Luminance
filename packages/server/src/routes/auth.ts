@@ -34,7 +34,7 @@ router.post("/register", (req: Request, res: Response) => {
       .create(username, password)
       .then((creds) => {
         // Create a profile for the new user
-        return profiles.create({ userid: creds.username })
+        return profiles.create({ userid: creds.username, favoriteCards: [], avatar: "" })
           .then(() => creds)
           .catch((profileErr) => {
             // If profile creation fails, clean up by throwing error
